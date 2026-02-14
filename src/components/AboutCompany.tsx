@@ -12,7 +12,7 @@ const AboutCompany = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="px-10"
+            className="px-20"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               <span className="block">About</span>
@@ -28,7 +28,7 @@ const AboutCompany = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="col-span-2 px-10"
+            className="col-span-2 px-20"
           >
             <p className="text-muted-foreground leading-relaxed mb-6">
               Amigos International Co., Ltd. was established in 2010 and has grown over 14 years into one of Myanmar's
