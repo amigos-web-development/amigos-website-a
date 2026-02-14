@@ -35,18 +35,18 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
   }, []);
 
   return (
-    <div className="bg-slate-700 dark:slate-500 border-b border-nav-border">
+    <div className="bg-slate-800 dark:bg-slate-600 border-b border-nav-border">
       <div
         className="container mx-auto flex items-center justify-between h-11 px-4 text-sm"
         style={{ maxWidth: "80%" }}
       >
         {/* Left: Phone & Email */}
         <div className="hidden md:flex items-center gap-6 text-muted-foreground text-slate-200 dark:text-slate-300">
-          <a href="tel:01-3566717" className="flex items-center gap-1.5 transition-colors">
+          <a href="tel:01-3566717" className="flex items-center gap-1.5 transition-colors text-slate-200 dark:text-slate-100">
             <Phone className="w-3.5 h-3.5" />
             <span>01-3566717</span>
           </a>
-          <a href="mailto:support@amigosmyanmar.com" className="flex items-center gap-1.5 transition-colors">
+          <a href="mailto:support@amigosmyanmar.com" className="flex items-center gap-1.5 transition-colors text-slate-200 dark:text-slate-100">
             <Mail className="w-3.5 h-3.5" />
             <span>support@amigosmyanmar.com</span>
           </a>
@@ -55,7 +55,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
           {/* Search */}
-          <div className="relative rounded-lg hover:bg-accent text-slate-300">
+          <div className="relative rounded-lg hover:bg-accent text-slate-200 dark:text-slate-100">
             {searchOpen ? (
               <div className="flex items-center bg-secondary rounded-lg overflow-hidden animate-scale-in">
                 <input
@@ -82,7 +82,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
                 onClick={() => setSearchOpen(true)}
                 className="p-2 hover:text-accent transition-colors text-muted-foreground"
               >
-                <Search className="w-4 h-4 rounded-lg hover:bg-accent text-slate-300" />
+                <Search className="w-4 h-4 rounded-lg hover:bg-accent text-slate-200 dark:text-slate-100" />
               </button>
             )}
           </div>
@@ -91,7 +91,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           <div ref={langRef} className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 p-2 rounded-lg hover:bg-accent transition-colors text-slate-300"
+              className="flex items-center gap-1 p-2 rounded-lg hover:bg-accent transition-colors text-slate-200 dark:text-slate-100"
             >
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline text-xs">{selectedLang.name}</span>
@@ -117,12 +117,12 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           </div>
 
           {/* Dark/Light Toggle */}
-          <button onClick={toggleDark} className="p-2 transition-colors rounded-lg hover:bg-accent text-slate-300">
+          <button onClick={toggleDark} className="p-2 transition-colors rounded-lg hover:bg-accent text-slate-200 dark:text-slate-100">
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
           {/* Cart */}
-          <button className="p-2 rounded-lg hover:bg-accent transition-colors text-slate-300 relative">
+          <button className="p-2 rounded-lg hover:bg-accent transition-colors text-slate-200 dark:text-slate-100 relative">
             <ShoppingCart className="w-4 h-4" />
           </button>
         </div>
