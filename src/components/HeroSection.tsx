@@ -37,8 +37,8 @@ const HeroSection = () => {
       </AnimatePresence>
 
       {/* Content */}
-      <div className="relative z-10 h-full w-4/5 flex items-center">
-        <div className="container mx-auto px-4">
+      <div className="relative z-10 h-full flex items-center">
+        <div className="container style={{ maxWidth: "80%" }} mx-auto px-4">
           <motion.div
             key={`content-${current}`}
             initial={{ opacity: 0, y: 30 }}
