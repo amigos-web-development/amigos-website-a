@@ -41,11 +41,8 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         style={{ maxWidth: "80%" }}
       >
         {/* Left: Phone & Email */}
-        <div className="hidden md:flex items-center gap-6 text-muted-foreground text-slate-200 dark:text-slate-400">
-          <a
-            href="tel:01-3566717"
-            className="text-slate-200 dark:text-slate-400 flex items-center gap-1.5 hover:text-accent transition-colors"
-          >
+        <div className="hidden md:flex items-center gap-6 text-muted-foreground text-slate-200 dark:text-slate-300">
+          <a href="tel:01-3566717" className="flex items-center gap-1.5 hover:text-accent transition-colors">
             <Phone className="w-3.5 h-3.5" />
             <span>01-3566717</span>
           </a>
@@ -61,7 +58,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
           {/* Search */}
-          <div className="relative">
+          <div className="relative text-slate-200 dark:text-slate-300">
             {searchOpen ? (
               <div className="flex items-center bg-secondary rounded-lg overflow-hidden animate-scale-in">
                 <input
