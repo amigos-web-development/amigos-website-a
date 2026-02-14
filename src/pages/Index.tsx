@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import KeyProductCategories from "@/components/KeyProductCategories";
 import WhatWeDo from "@/components/WhatWeDo";
 import AboutCompany from "@/components/AboutCompany";
+import Testimonials from "@/components/Testimonials";
 import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 
@@ -23,6 +24,7 @@ const Index = () => {
       <WhatWeDo />
       <KeyProductCategories />
       <AboutCompany />
+      <Testimonials />
       <Partners />
       <Footer />
     </div>
