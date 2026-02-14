@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 const Footer = () => {
   return (
     <footer className="footer-gradient text-footer-foreground">
-      <div className="container mx-auto py-16 px-[20px]">
+      <div className="mx-auto py-16 px-4" style={{ maxWidth: "80%" }}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Resources */}
           <div>
@@ -134,7 +134,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-footer-foreground/10">
-        <div className="container mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-footer-foreground/60">
+        <div className="mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-footer-foreground/60" style={{ maxWidth: "80%" }}>
           <p>
             © Copyright <span className="text-footer-heading font-semibold">Amigos International Co., Ltd.</span> All
             Rights Reserved.
