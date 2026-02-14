@@ -38,7 +38,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">
-        <div className="container style={{ maxWidth: "80%" }} mx-auto px-4">
+        <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
           <motion.div
             key={`content-${current}`}
             initial={{ opacity: 0, y: 30 }}
