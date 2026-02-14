@@ -85,7 +85,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
                 onClick={() => setSearchOpen(true)}
                 className="p-2 hover:text-accent transition-colors text-muted-foreground"
               >
-                <Search className="w-4 h-4 border-lg hover:bg-slate-900 dark:hover:bg-slate-700 text-slate-200 dark:text-slate-300" />
+                <Search className="w-4 h-4 rounded-lg hover:bg-slate-900 dark:hover:bg-slate-700 text-slate-200 dark:text-slate-300" />
               </button>
             )}
           </div>
@@ -94,7 +94,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           <div ref={langRef} className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 p-2 border-lg hover:bg-slate-900 dark:hover:bg-slate-700 transition-colors text-slate-200 dark:text-slate-300"
+              className="flex items-center gap-1 p-2 rounded-lg hover:bg-slate-900 dark:hover:bg-slate-700 transition-colors text-slate-200 dark:text-slate-300"
             >
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline text-xs">{selectedLang.name}</span>
@@ -122,13 +122,13 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           {/* Dark/Light Toggle */}
           <button
             onClick={toggleDark}
-            className="p-2 transition-colors border-lg hover:bg-slate-900 dark:hover:bg-slate-700 text-slate-200 dark:text-slate-300"
+            className="p-2 transition-colors rounded-lg hover:bg-slate-900 dark:hover:bg-slate-700 text-slate-200 dark:text-slate-300"
           >
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
           {/* Cart */}
-          <button className="p-2 border-lg hover:bg-slate-900 dark:hover:bg-slate-700 transition-colors text-slate-200 dark:text-slate-300 relative">
+          <button className="p-2 rounded-lg hover:bg-slate-900 dark:hover:bg-slate-700 transition-colors text-slate-200 dark:text-slate-300 relative">
             <ShoppingCart className="w-4 h-4" />
           </button>
         </div>
