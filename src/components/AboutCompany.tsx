@@ -5,14 +5,14 @@ const AboutCompany = () => {
   return (
     <section id="about" className="py-20 bg-background px-[2px]">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start justify-items-center align-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start justify-items-center align-middle">
           {/* Column 1 - Title */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="px-20"
+            className="px-20 inline-block algin-text-middle"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               <span className="block">About</span>
