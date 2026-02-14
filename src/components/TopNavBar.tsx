@@ -41,15 +41,12 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         style={{ maxWidth: "80%" }}
       >
         {/* Left: Phone & Email */}
-        <div className="hidden md:flex items-center gap-6 text-muted-foreground text-slate-200 dark:text-slate-300">
-          <a href="tel:01-3566717" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+        <div className="hidden md:flex items-center gap-6 text-slate-200 dark:text-slate-300">
+          <a href="tel:01-3566717" className="flex items-center gap-1.5 transition-colors">
             <Phone className="w-3.5 h-3.5" />
             <span>01-3566717</span>
           </a>
-          <a
-            href="mailto:support@amigosmyanmar.com"
-            className="flex items-center gap-1.5 hover:text-accent transition-colors"
-          >
+          <a href="mailto:support@amigosmyanmar.com" className="flex items-center gap-1.5 transition-colors">
             <Mail className="w-3.5 h-3.5" />
             <span>support@amigosmyanmar.com</span>
           </a>
@@ -75,16 +72,13 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
                     setSearchOpen(false);
                     setSearchQuery("");
                   }}
-                  className="p-1.5 hover:text-accent transition-colors"
+                  className="p-1.5 transition-colors"
                 >
                   <X className="w-4 h-4" />
                 </button>
               </div>
             ) : (
-              <button
-                onClick={() => setSearchOpen(true)}
-                className="p-2 hover:text-accent transition-colors text-muted-foreground"
-              >
+              <button onClick={() => setSearchOpen(true)} className="p-2 transition-colors">
                 <Search className="w-4 h-4 text-slate-200 dark:text-slate-300" />
               </button>
             )}
@@ -94,7 +88,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           <div ref={langRef} className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 p-2 hover:text-accent transition-colors text-slate-200 dark:text-slate-300"
+              className="flex items-center gap-1 p-2 transition-colors text-slate-200 dark:text-slate-300"
             >
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline text-xs">{selectedLang.name}</span>
