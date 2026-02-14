@@ -94,7 +94,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           <div ref={langRef} className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 p-2 hover:text-accent transition-colors text-slate-200 dark:text-slate-300"
+              className="flex items-center gap-1 p-2 hover:bg-slate-900 dark:hover:bg-slate-700 transition-colors text-slate-200 dark:text-slate-300"
             >
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline text-xs">{selectedLang.name}</span>
@@ -120,7 +120,10 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           </div>
 
           {/* Dark/Light Toggle */}
-          <button onClick={toggleDark} className="p-2 transition-colors text-slate-200 dark:text-slate-300">
+          <button
+            onClick={toggleDark}
+            className="p-2 transition-colors hover:bg-slate-900 dark:hover:bg-slate-700 text-slate-200 dark:text-slate-300"
+          >
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
