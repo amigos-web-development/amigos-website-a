@@ -46,7 +46,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="max-w-2xl">
 
-            <p className="text-primary-foreground/90 text-2xl md:text-xl leading-relaxed mb-8 max-w-lg">
+            <p className="text-primary-foreground/90 text-3xl md:text-xl leading-relaxed mb-8 max-w-lg">
               {slides[current].description}
             </p>
             <div className="flex flex-wrap gap-4">
