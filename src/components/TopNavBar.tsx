@@ -35,7 +35,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
   }, []);
 
   return (
-    <div className="bg-slate-700 dark:slate-500 border-b border-nav-border">
+    <div className="bg-slate-700 dark:slate-500 text-slate-100 dark:text-slate-300 border-b border-nav-border">
       <div
         className="container mx-auto flex items-center justify-between h-11 px-4 text-sm"
         style={{ maxWidth: "80%" }}
