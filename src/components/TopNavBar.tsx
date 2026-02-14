@@ -117,10 +117,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           </div>
 
           {/* Dark/Light Toggle */}
-          <button
-            onClick={toggleDark}
-            className="p-2 transition-colors rounded-lg hover:bg-accent text-slate-200 dark:text-slate-300"
-          >
+          <button onClick={toggleDark} className="p-2 transition-colors rounded-lg hover:bg-accent text-top-nav-color">
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
