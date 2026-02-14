@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 
 const AboutCompany = () => {
   return (
-    <section id="about" className="py-20 bg-background px-[2px]">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-20 bg-background">
+      <div className="mx-auto px-4" style={{ maxWidth: "80%" }}>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center justify-items-center">
           {/* Column 1 - Title */}
           <motion.div

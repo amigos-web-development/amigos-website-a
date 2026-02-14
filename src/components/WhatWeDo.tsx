@@ -77,8 +77,8 @@ const ServiceCard = ({ service, index }: {service: typeof services[0];index: num
 
 const WhatWeDo = () => {
   return (
-    <section id="services" className="py-20 px-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-20 bg-background">
+      <div className="mx-auto px-4" style={{ maxWidth: "80%" }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
