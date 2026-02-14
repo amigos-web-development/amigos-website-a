@@ -120,7 +120,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
 
           {/* Dark/Light Toggle */}
           <button onClick={toggleDark} className="p-2 hover:text-accent transition-colors text-muted-foreground">
-            {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            {isDark ? <Sun className="w-4 h-4 text-slate-200 dark:text-slate-300" /> : <Moon className="w-4 h-4" />}
           </button>
 
           {/* Cart */}
