@@ -18,8 +18,8 @@ const Index = () => {
       <TopNavBar isDark={isDark} toggleDark={() => setIsDark(!isDark)} />
       <MainNavBar />
       <HeroSection />
-      <KeyProductCategories />
       <WhatWeDo />
+      <KeyProductCategories />
       <Footer />
     </div>
   );
