@@ -35,14 +35,17 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
   }, []);
 
   return (
-    <div className="bg-slate-700 dark:slate-500 !text-slate-100 dark:text-slate-300 border-b border-nav-border">
+    <div className="bg-slate-700 dark:slate-500 border-b border-nav-border">
       <div
         className="container mx-auto flex items-center justify-between h-11 px-4 text-sm"
         style={{ maxWidth: "80%" }}
       >
         {/* Left: Phone & Email */}
         <div className="hidden md:flex items-center gap-6 text-muted-foreground">
-          <a href="tel:01-3566717" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+          <a
+            href="tel:01-3566717"
+            className="text-slate-100 dark:text-slate-300 flex items-center gap-1.5 hover:text-accent transition-colors"
+          >
             <Phone className="w-3.5 h-3.5" />
             <span>01-3566717</span>
           </a>
