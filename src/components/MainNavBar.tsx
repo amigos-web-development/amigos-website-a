@@ -40,7 +40,7 @@ const MainNavBar = () => {
         {/* Left: Logo + Nav links */}
         <div className="hidden lg:flex items-center gap-1">
           <a href="/" className="flex-shrink-0 mr-4">
-            <img src={logo} alt="Amigos International" className="h-9" />
+            <img src={logo} alt="Amigos International" className="h-12" />
           </a>
           {navLinks.map((link) =>
             link.hasDropdown ? (
