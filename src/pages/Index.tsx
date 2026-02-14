@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import TopNavBar from "@/components/TopNavBar";
 import MainNavBar from "@/components/MainNavBar";
 import HeroSection from "@/components/HeroSection";
+import KeyProductCategories from "@/components/KeyProductCategories";
 import WhatWeDo from "@/components/WhatWeDo";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
       <TopNavBar isDark={isDark} toggleDark={() => setIsDark(!isDark)} />
       <MainNavBar />
       <HeroSection />
+      <KeyProductCategories />
       <WhatWeDo />
       <Footer />
     </div>
