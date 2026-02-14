@@ -84,14 +84,14 @@ const MainNavBar = () => {
         <div className="hidden lg:flex items-center gap-2">
           <a
             href="#"
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-800 dark:hover:bg-slate-600 transition-colors"
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-accent transition-colors"
           >
             <LogIn className="w-4 h-4" />
             Login
           </a>
           <a
             href="#"
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border border-border rounded-lg text-foreground bg-slate-800 dark:bg-slate-600 text-slate-200 dark:text-slate-100 hover:opacity-90 transition-colors"
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border border-border rounded-lg text-foreground bg-slate-800 dark:bg-slate-600 hover:bg-accent text-slate-200 dark:text-slate-100 transition-colors"
           >
             <UserPlus className="w-4 h-4" />
             Register
@@ -151,7 +151,7 @@ const MainNavBar = () => {
               </a>
               <a
                 href="#"
-                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium border border-border rounded-lg text-foreground"
+                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium border border-border rounded-lg bg-accent text-foreground"
               >
                 <UserPlus className="w-4 h-4" /> Register
               </a>
