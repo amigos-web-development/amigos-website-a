@@ -128,7 +128,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           </button>
 
           {/* Cart */}
-          <button className="p-2 rounded-lg hover:bg-slate-900 dark:hover:bg-slate-700 transition-colors text-slate-200 dark:text-slate-300 relative">
+          <button className="p-2 rounded-lg hover:bg-primary transition-colors text-slate-200 dark:text-slate-300 relative">
             <ShoppingCart className="w-4 h-4" />
           </button>
         </div>
