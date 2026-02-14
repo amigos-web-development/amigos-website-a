@@ -53,8 +53,6 @@
     --footer-heading: 0 0% 100%;
     --footer-accent: 350 65% 55%;
     --card-hover-shadow: 0 20px 40px -12px hsla(24, 10%, 10%, 0.12);
-
-    --top-nav-color: slate-300;
   }
 
   .dark {
@@ -94,8 +92,6 @@
     --footer-heading: 60 9% 98%;
     --footer-accent: 25 95% 53%;
     --card-hover-shadow: 0 20px 40px -12px hsla(0, 0%, 0%, 0.4);
-
-    --top-nav-color: slate-400;
   }
 }
 

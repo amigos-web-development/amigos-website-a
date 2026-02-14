@@ -55,7 +55,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
           {/* Search */}
-          <div className="relative rounded-lg hover:bg-accent text-slate-200 dark:text-slate-300">
+          <div className="relative rounded-lg hover:bg-accent text-slate-300">
             {searchOpen ? (
               <div className="flex items-center bg-secondary rounded-lg overflow-hidden animate-scale-in">
                 <input
@@ -82,7 +82,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
                 onClick={() => setSearchOpen(true)}
                 className="p-2 hover:text-accent transition-colors text-muted-foreground"
               >
-                <Search className="w-4 h-4 rounded-lg hover:bg-accent text-slate-200 dark:text-slate-300" />
+                <Search className="w-4 h-4 rounded-lg hover:bg-accent text-slate-300" />
               </button>
             )}
           </div>
@@ -91,7 +91,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           <div ref={langRef} className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 p-2 rounded-lg hover:bg-accent transition-colors text-slate-200 dark:text-slate-300"
+              className="flex items-center gap-1 p-2 rounded-lg hover:bg-accent transition-colors text-slate-300"
             >
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline text-xs">{selectedLang.name}</span>
@@ -117,12 +117,12 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           </div>
 
           {/* Dark/Light Toggle */}
-          <button onClick={toggleDark} className="p-2 transition-colors rounded-lg hover:bg-accent text-top-nav-color">
+          <button onClick={toggleDark} className="p-2 transition-colors rounded-lg hover:bg-accent text-slate-300">
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
           {/* Cart */}
-          <button className="p-2 rounded-lg hover:bg-accent transition-colors text-top-nav-color relative">
+          <button className="p-2 rounded-lg hover:bg-accent transition-colors text-slate-300 relative">
             <ShoppingCart className="w-4 h-4" />
           </button>
         </div>
