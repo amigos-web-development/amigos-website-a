@@ -84,7 +84,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
               onClick={() => setSearchOpen(true)}
               className="p-2 hover:text-accent transition-colors text-muted-foreground">
 
-                <Search className="w-4 h-4" />
+                <Search className="w-4 h-4 text-slate-200 dark:text-slate-300" />
               </button>
             }
           </div>
