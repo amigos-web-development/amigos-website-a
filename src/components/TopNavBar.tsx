@@ -58,7 +58,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
           {/* Search */}
-          <div className="relative>
+          <div className="relative text-slate-200 dark:text-slate-300">
             {searchOpen ? (
               <div className="flex items-center bg-secondary rounded-lg overflow-hidden animate-scale-in">
                 <input
@@ -119,7 +119,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           </div>
 
           {/* Dark/Light Toggle */}
-          <button onClick={toggleDark} className="text-slate-200 dark:text-slate-300 p-2 hover:text-accent transition-colors">
+          <button onClick={toggleDark} className="p-2 hover:text-accent transition-colors text-muted-foreground">
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
