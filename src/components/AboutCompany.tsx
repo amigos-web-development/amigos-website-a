@@ -12,8 +12,8 @@ const AboutCompany = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="px-20 py-auto"
-          >
+            className="px-20">
+
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               <span className="block">About</span>
               <span className="block">Amigos International</span>
@@ -28,8 +28,8 @@ const AboutCompany = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="col-span-2 px-20"
-          >
+            className="col-span-2 px-20">
+
             <p className="text-muted-foreground leading-relaxed mb-6">
               Amigos International Co., Ltd. was established in 2010 and has grown over 14 years into one of Myanmar's
               most trusted providers of engineering and scientific solutions. We specialize in the distribution, sales,
@@ -41,17 +41,17 @@ const AboutCompany = () => {
             </p>
             <ul className="space-y-2 mb-8">
               {[
-                "Land Surveying Instruments",
-                "Construction Material Testing Equipment",
-                "Laboratory & Scientific Testing Instruments",
-                "Environmental & Weather Monitoring Systems",
-                "Geological & Earth Exploration Instruments",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-muted-foreground">
+              "Land Surveying Instruments",
+              "Construction Material Testing Equipment",
+              "Laboratory & Scientific Testing Instruments",
+              "Environmental & Weather Monitoring Systems",
+              "Geological & Earth Exploration Instruments"].
+              map((item) =>
+              <li key={item} className="flex items-center gap-3 text-muted-foreground">
                   <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                   {item}
                 </li>
-              ))}
+              )}
             </ul>
             <button className="group flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:opacity-90">
               Read More
@@ -60,8 +60,8 @@ const AboutCompany = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default AboutCompany;
