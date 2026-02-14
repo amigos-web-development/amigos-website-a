@@ -127,7 +127,7 @@ const Footer = () => {
             <p className="text-xs leading-relaxed mb-4 text-footer-foreground/80">
               We are deeply committed to customer satisfaction and long-term technical support.
             </p>
-            <img src={logo} alt="Amigos International" className="h-10 brightness-1 invert opacity-80" />
+            <img src={logo} alt="Amigos International" className="h-10 brightness-1 opacity-80" />
           </div>
         </div>
       </div>
