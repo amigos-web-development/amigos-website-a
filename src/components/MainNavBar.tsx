@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, LogIn, UserPlus, Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const productCategories = [
   "Land Surveying Instrument",
@@ -36,8 +37,11 @@ const MainNavBar = () => {
   return (
     <nav className="bg-nav-bg border-b border-nav-border sticky top-0 z-40 shadow-sm">
       <div className="container mx-auto flex items-center justify-between h-14 px-4">
-        {/* Left: Nav links */}
+        {/* Left: Logo + Nav links */}
         <div className="hidden lg:flex items-center gap-1">
+          <a href="/" className="flex-shrink-0 mr-4">
+            <img src={logo} alt="Amigos International" className="h-9" />
+          </a>
           {navLinks.map((link) =>
             link.hasDropdown ? (
               <div key={link.label} ref={dropdownRef} className="relative">
@@ -86,7 +90,10 @@ const MainNavBar = () => {
           </a>
         </div>
 
-        {/* Mobile Menu Toggle */}
+        {/* Mobile: Logo + Menu Toggle */}
+        <a href="/" className="lg:hidden flex-shrink-0">
+          <img src={logo} alt="Amigos International" className="h-9" />
+        </a>
         <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden p-2 text-foreground">
           {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>

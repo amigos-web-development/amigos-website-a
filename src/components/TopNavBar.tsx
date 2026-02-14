@@ -37,12 +37,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
   return (
     <div className="bg-nav-bg border-b border-nav-border">
       <div className="container mx-auto flex items-center justify-between h-11 px-4 text-sm">
-        {/* Left: Logo */}
-        <a href="/" className="flex-shrink-0">
-          <img src={logo} alt="Amigos International" className="h-9" />
-        </a>
-
-        {/* Center: Phone & Email */}
+        {/* Left: Phone & Email */}
         <div className="hidden md:flex items-center gap-6 text-muted-foreground">
           <a href="tel:01-3566717" className="flex items-center gap-1.5 hover:text-accent transition-colors">
             <Phone className="w-3.5 h-3.5" />
