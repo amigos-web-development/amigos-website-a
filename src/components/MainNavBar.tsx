@@ -47,7 +47,7 @@ const MainNavBar = () => {
               <div key={link.label} ref={dropdownRef} className="relative">
                 <button
                   onClick={() => setProductsOpen(!productsOpen)}
-                  className="nav-link-hover flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
+                  className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-accent transition-colors"
                 >
                   {link.label}
                   <ChevronDown
@@ -60,7 +60,7 @@ const MainNavBar = () => {
                       <a
                         key={cat}
                         href="#"
-                        className="block px-5 py-2.5 text-sm text-foreground hover:bg-secondary hover:text-accent transition-colors"
+                        className="block px-5 py-2.5 text-sm text-foreground hover:bg-accent transition-colors"
                       >
                         {cat}
                       </a>
@@ -72,7 +72,7 @@ const MainNavBar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="nav-link-hover px-4 py-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
+                className="px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-accent transition-colors"
               >
                 {link.label}
               </a>
@@ -84,14 +84,14 @@ const MainNavBar = () => {
         <div className="hidden lg:flex items-center gap-2">
           <a
             href="#"
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-800 dark:hover:bg-slate-600 transition-colors"
           >
             <LogIn className="w-4 h-4" />
             Login
           </a>
           <a
             href="#"
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border border-border rounded-lg text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border border-border rounded-lg text-foreground bg-slate-800 dark:bg-slate-600 text-slate-200 dark:text-slate-100 hover:opacity-90 transition-colors"
           >
             <UserPlus className="w-4 h-4" />
             Register
