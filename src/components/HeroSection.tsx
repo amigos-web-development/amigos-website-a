@@ -5,10 +5,10 @@ import heroBg2 from "@/assets/hero_background_2.jpg";
 import heroBg3 from "@/assets/hero_background_3.jpg";
 
 const slides = [
-  { bg: heroBg1, description: "We are deeply committed to customer satisfaction and long-term technical support." },
-  { bg: heroBg2, description: "We are deeply committed to customer satisfaction and long-term technical support." },
-  { bg: heroBg3, description: "We are deeply committed to customer satisfaction and long-term technical support." },
-];
+{ bg: heroBg1, description: "We are deeply committed to customer satisfaction and long-term technical support." },
+{ bg: heroBg2, description: "We are deeply committed to customer satisfaction and long-term technical support." },
+{ bg: heroBg3, description: "We are deeply committed to customer satisfaction and long-term technical support." }];
+
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
@@ -29,8 +29,8 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="absolute inset-0"
-        >
+          className="absolute inset-0">
+
           <img src={slides[current].bg} alt="" className="w-full h-full object-cover animate-hero-zoom" />
           <div className="absolute inset-0 hero-gradient-overlay" />
         </motion.div>
@@ -44,22 +44,22 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="max-w-2xl"
-          >
-            <p className="text-primary-foreground/90 text-lg md:text-xl leading-relaxed mb-8 max-w-lg">
+            className="max-w-2xl">
+
+            <p className="text-primary-foreground/90 text-2xl md:text-xl leading-relaxed mb-8 max-w-lg">
               {slides[current].description}
             </p>
             <div className="flex flex-wrap gap-4">
               <a
                 href="#"
-                className="px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg"
-              >
+                className="px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg">
+
                 Contact Sales
               </a>
               <a
                 href="#"
-                className="px-6 py-3 border-2 border-primary-foreground/50 text-primary-foreground font-semibold rounded-lg hover:bg-primary-foreground/10 transition-all duration-300"
-              >
+                className="px-6 py-3 border-2 border-primary-foreground/50 text-primary-foreground font-semibold rounded-lg hover:bg-primary-foreground/10 transition-all duration-300">
+
                 View Products
               </a>
             </div>
@@ -69,16 +69,16 @@ const HeroSection = () => {
 
       {/* Indicators */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`slide-indicator ${i === current ? "slide-indicator-active" : "slide-indicator-inactive"}`}
-          />
-        ))}
+        {slides.map((_, i) =>
+        <button
+          key={i}
+          onClick={() => setCurrent(i)}
+          className={`slide-indicator ${i === current ? "slide-indicator-active" : "slide-indicator-inactive"}`} />
+
+        )}
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
