@@ -58,7 +58,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
           {/* Search */}
-          <div className="relative border-lg hover:bg-slate-900 dark:hover:bg-slate-700 text-slate-200 dark:text-slate-300">
+          <div className="relative rounded-lg hover:bg-slate-900 dark:hover:bg-slate-700 text-slate-200 dark:text-slate-300">
             {searchOpen ? (
               <div className="flex items-center bg-secondary rounded-lg overflow-hidden animate-scale-in">
                 <input
