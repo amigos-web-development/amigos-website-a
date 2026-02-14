@@ -5,7 +5,7 @@ const AboutCompany = () => {
   return (
     <section id="about" className="py-20 bg-background px-[20px]">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           {/* Column 1 - Title */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -13,7 +13,7 @@ const AboutCompany = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="w-1/3 text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               <span className="block">About</span>
               <span className="block">Amigos International</span>
               <span className="block">Co., Ltd.</span>
@@ -27,6 +27,7 @@ const AboutCompany = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
+            className="col-span-2"
           >
             <p className="text-muted-foreground leading-relaxed mb-6">
               Amigos International Co., Ltd. was established in 2010 and has grown over 14 years into one of Myanmar's
