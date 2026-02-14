@@ -35,7 +35,7 @@ const MainNavBar = () => {
   }, []);
 
   return (
-    <nav className="bg-nav-bg border-b border-nav-border sticky top-0 z-40 shadow-sm">
+    <nav className="bg-nav-bg border-b border-nav-border sticky top-0 z-40 shadow-sm" style={{ maxWidth: "80%" }}>
       <div className="container mx-auto flex items-center justify-between h-14 px-4">
         {/* Left: Logo + Nav links */}
         <div className="hidden lg:flex items-center gap-1">
@@ -50,7 +50,9 @@ const MainNavBar = () => {
                   className="nav-link-hover flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
                 >
                   {link.label}
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${productsOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-300 ${productsOpen ? "rotate-180" : ""}`}
+                  />
                 </button>
                 {productsOpen && (
                   <div className="absolute left-0 top-full mt-0.5 bg-card border border-border rounded-lg shadow-xl py-2 z-50 animate-scale-in min-w-[340px]">
@@ -74,17 +76,23 @@ const MainNavBar = () => {
               >
                 {link.label}
               </a>
-            )
+            ),
           )}
         </div>
 
         {/* Right: Auth */}
         <div className="hidden lg:flex items-center gap-2">
-          <a href="#" className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-foreground hover:text-accent transition-colors">
+          <a
+            href="#"
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-foreground hover:text-accent transition-colors"
+          >
             <LogIn className="w-4 h-4" />
             Login
           </a>
-          <a href="#" className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border border-border rounded-lg text-foreground hover:bg-accent hover:text-accent-foreground transition-colors">
+          <a
+            href="#"
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border border-border rounded-lg text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+          >
             <UserPlus className="w-4 h-4" />
             Register
           </a>
@@ -116,7 +124,11 @@ const MainNavBar = () => {
                   {productsOpen && (
                     <div className="ml-4 mt-1 space-y-1">
                       {productCategories.map((cat) => (
-                        <a key={cat} href="#" className="block px-3 py-1.5 text-sm text-muted-foreground hover:text-accent">
+                        <a
+                          key={cat}
+                          href="#"
+                          className="block px-3 py-1.5 text-sm text-muted-foreground hover:text-accent"
+                        >
                           {cat}
                         </a>
                       ))}
@@ -124,16 +136,23 @@ const MainNavBar = () => {
                   )}
                 </div>
               ) : (
-                <a key={link.label} href={link.href} className="block px-3 py-2 text-sm font-medium text-foreground hover:text-accent">
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="block px-3 py-2 text-sm font-medium text-foreground hover:text-accent"
+                >
                   {link.label}
                 </a>
-              )
+              ),
             )}
             <div className="flex gap-2 pt-2 border-t border-border">
               <a href="#" className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-foreground">
                 <LogIn className="w-4 h-4" /> Login
               </a>
-              <a href="#" className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium border border-border rounded-lg text-foreground">
+              <a
+                href="#"
+                className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium border border-border rounded-lg text-foreground"
+              >
                 <UserPlus className="w-4 h-4" /> Register
               </a>
             </div>

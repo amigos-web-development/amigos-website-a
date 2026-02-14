@@ -35,7 +35,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
   }, []);
 
   return (
-    <div className="bg-nav-bg border-b border-nav-border">
+    <div className="bg-nav-bg border-b border-nav-border" style={{ maxWidth: "80%" }}>
       <div className="container mx-auto flex items-center justify-between h-11 px-4 text-sm">
         {/* Left: Phone & Email */}
         <div className="hidden md:flex items-center gap-6 text-muted-foreground">
@@ -43,7 +43,10 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
             <Phone className="w-3.5 h-3.5" />
             <span>01-3566717</span>
           </a>
-          <a href="mailto:support@amigosmyanmar.com" className="flex items-center gap-1.5 hover:text-accent transition-colors">
+          <a
+            href="mailto:support@amigosmyanmar.com"
+            className="flex items-center gap-1.5 hover:text-accent transition-colors"
+          >
             <Mail className="w-3.5 h-3.5" />
             <span>support@amigosmyanmar.com</span>
           </a>
@@ -63,12 +66,21 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
                   placeholder="Search..."
                   className="bg-transparent px-3 py-1.5 text-sm outline-none w-48 text-foreground placeholder:text-muted-foreground"
                 />
-                <button onClick={() => { setSearchOpen(false); setSearchQuery(""); }} className="p-1.5 hover:text-accent transition-colors">
+                <button
+                  onClick={() => {
+                    setSearchOpen(false);
+                    setSearchQuery("");
+                  }}
+                  className="p-1.5 hover:text-accent transition-colors"
+                >
                   <X className="w-4 h-4" />
                 </button>
               </div>
             ) : (
-              <button onClick={() => setSearchOpen(true)} className="p-2 hover:text-accent transition-colors text-muted-foreground">
+              <button
+                onClick={() => setSearchOpen(true)}
+                className="p-2 hover:text-accent transition-colors text-muted-foreground"
+              >
                 <Search className="w-4 h-4" />
               </button>
             )}
@@ -88,7 +100,10 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
-                    onClick={() => { setSelectedLang(lang); setLangOpen(false); }}
+                    onClick={() => {
+                      setSelectedLang(lang);
+                      setLangOpen(false);
+                    }}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-secondary transition-colors ${
                       selectedLang.code === lang.code ? "text-accent font-medium" : "text-foreground"
                     }`}
