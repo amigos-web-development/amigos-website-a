@@ -93,7 +93,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           <div ref={langRef} className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 p-2 hover:text-accent transition-colors text-muted-foreground">
+              className="flex items-center gap-1 p-2 hover:text-accent transition-colors text-slate-200 dark:text-slate-300">
 
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline text-xs">{selectedLang.name}</span>
