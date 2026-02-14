@@ -41,10 +41,10 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         style={{ maxWidth: "80%" }}
       >
         {/* Left: Phone & Email */}
-        <div className="hidden md:flex items-center gap-6 text-muted-foreground">
+        <div className="hidden md:flex items-center gap-6 text-muted-foreground text-slate-200 dark:text-slate-400">
           <a
             href="tel:01-3566717"
-            className="text-slate-100 dark:text-slate-300 flex items-center gap-1.5 hover:text-accent transition-colors"
+            className="text-slate-200 dark:text-slate-400 flex items-center gap-1.5 hover:text-accent transition-colors"
           >
             <Phone className="w-3.5 h-3.5" />
             <span>01-3566717</span>
