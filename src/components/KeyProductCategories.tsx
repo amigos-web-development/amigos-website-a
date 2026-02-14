@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { ArrowRight, Compass, HardHat, Ship, CloudSun, Mountain, Droplets, FlaskConical, TestTubeDiagonal } from "lucide-react";
+import { useEffect, useRef, useCallback } from "react";
+import { ArrowRight, ArrowLeft, Compass, HardHat, Ship, CloudSun, Mountain, Droplets, FlaskConical, TestTubeDiagonal, ChevronLeft, ChevronRight } from "lucide-react";
 
 const categories = [
   { name: "Land Surveying Instrument", icon: Compass },
@@ -12,40 +12,55 @@ const categories = [
   { name: "Analytical Testing Instrument", icon: TestTubeDiagonal },
 ];
 
+const CARD_WIDTH = 260 + 20; // card width + gap
+
 const KeyProductCategories = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number>();
+  const scrollPosRef = useRef(0);
 
-  useEffect(() => {
+  const startAnimation = useCallback(() => {
     const el = scrollRef.current;
     if (!el) return;
-
-    let scrollPos = 0;
     const speed = 0.5;
-
     const animate = () => {
-      scrollPos += speed;
-      if (scrollPos >= el.scrollWidth / 2) {
-        scrollPos = 0;
+      scrollPosRef.current += speed;
+      if (scrollPosRef.current >= el.scrollWidth / 2) {
+        scrollPosRef.current = 0;
       }
-      el.scrollLeft = scrollPos;
+      el.scrollLeft = scrollPosRef.current;
       animationRef.current = requestAnimationFrame(animate);
     };
-
     animationRef.current = requestAnimationFrame(animate);
-
-    const pause = () => cancelAnimationFrame(animationRef.current!);
-    const resume = () => { animationRef.current = requestAnimationFrame(animate); };
-
-    el.addEventListener("mouseenter", pause);
-    el.addEventListener("mouseleave", resume);
-
-    return () => {
-      cancelAnimationFrame(animationRef.current!);
-      el.removeEventListener("mouseenter", pause);
-      el.removeEventListener("mouseleave", resume);
-    };
   }, []);
+
+  const stopAnimation = useCallback(() => {
+    if (animationRef.current) cancelAnimationFrame(animationRef.current);
+  }, []);
+
+  useEffect(() => {
+    startAnimation();
+    const el = scrollRef.current;
+    if (!el) return;
+    el.addEventListener("mouseenter", stopAnimation);
+    el.addEventListener("mouseleave", startAnimation);
+    return () => {
+      stopAnimation();
+      el.removeEventListener("mouseenter", stopAnimation);
+      el.removeEventListener("mouseleave", startAnimation);
+    };
+  }, [startAnimation, stopAnimation]);
+
+  const scrollBy = (dir: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    stopAnimation();
+    scrollPosRef.current = el.scrollLeft + dir * CARD_WIDTH * 2;
+    if (scrollPosRef.current >= el.scrollWidth / 2) scrollPosRef.current -= el.scrollWidth / 2;
+    if (scrollPosRef.current < 0) scrollPosRef.current += el.scrollWidth / 2;
+    el.scrollTo({ left: scrollPosRef.current, behavior: "smooth" });
+    setTimeout(startAnimation, 600);
+  };
 
   const items = [...categories, ...categories];
 
@@ -60,11 +75,18 @@ const KeyProductCategories = () => {
         </p>
       </div>
 
-      <div
-        ref={scrollRef}
-        className="flex gap-5 overflow-hidden px-4"
-        style={{ scrollBehavior: "auto" }}
-      >
+      <div className="relative">
+        <button
+          onClick={() => scrollBy(-1)}
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card/80 backdrop-blur border border-border shadow-md flex items-center justify-center text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+        <div
+          ref={scrollRef}
+          className="flex gap-5 overflow-hidden px-4"
+          style={{ scrollBehavior: "auto" }}
+        >
         {items.map((cat, i) => {
           const Icon = cat.icon;
           return (
@@ -91,6 +113,13 @@ const KeyProductCategories = () => {
             </a>
           );
         })}
+        </div>
+        <button
+          onClick={() => scrollBy(1)}
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card/80 backdrop-blur border border-border shadow-md flex items-center justify-center text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
       </div>
     </section>
   );
