@@ -56,7 +56,7 @@ const HeroSection = () => {
               </a>
               <a
                 href="#"
-                className="px-6 py-3 border-2 border-primary-foreground/50 text-primary-foreground font-semibold rounded-lg hover:bg-primary-foreground/10 transition-all duration-300"
+                className="px-6 py-3 border-2 border-slate-200/50 text-slate-200 font-semibold rounded-lg hover:bg-slate-200/10 transition-all duration-300"
               >
                 View Products
               </a>
