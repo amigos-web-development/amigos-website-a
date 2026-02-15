@@ -49,7 +49,7 @@ const MainNavBar = () => {
               <div key={link.label} ref={dropdownRef} className="relative">
                 <button
                   onClick={() => setProductsOpen(!productsOpen)}
-                  className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                  className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                 >
                   {link.label}
                   <ChevronDown
@@ -63,7 +63,7 @@ const MainNavBar = () => {
                         <a
                           key={cat.label}
                           href="#"
-                          className="flex items-center gap-3 px-4 py-3 text-sm text-foreground hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors"
+                          className="flex items-center gap-3 px-4 py-3 text-sm text-foreground hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors"
                         >
                           <cat.icon className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
                           {cat.label}
@@ -77,7 +77,7 @@ const MainNavBar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                className="px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
               >
                 {link.label}
               </a>
@@ -89,7 +89,7 @@ const MainNavBar = () => {
         <div className="hidden lg:flex items-center gap-2">
           <a
             href="#"
-            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
           >
             <LogIn className="w-4 h-4" />
             Login
