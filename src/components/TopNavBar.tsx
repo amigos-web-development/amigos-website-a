@@ -55,7 +55,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
           {/* Search */}
-          <div className="relative rounded-lg hover:bg-accent text-slate-200 dark:text-slate-100">
+          <div className="relative rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 text-slate-200 dark:text-slate-100">
             {searchOpen ? (
               <div className="flex items-center bg-secondary rounded-lg overflow-hidden animate-scale-in">
                 <input
@@ -91,13 +91,13 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           <div ref={langRef} className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 p-2 rounded-lg hover:bg-accent transition-colors text-slate-200 dark:text-slate-100"
+              className="flex items-center gap-1 p-2 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors text-slate-200 dark:text-slate-100"
             >
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline text-xs">{selectedLang.name}</span>
             </button>
             {langOpen && (
-              <div className="absolute right-0 top-full mt-1 bg-card border border-border rounded-lg shadow-lg py-1 z-50 animate-scale-in min-w-[140px]">
+                <div className="absolute right-0 top-full mt-1 bg-card border border-border rounded-lg shadow-lg py-1 z-50 animate-scale-in min-w-[140px]">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
@@ -105,7 +105,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
                       setSelectedLang(lang);
                       setLangOpen(false);
                     }}
-                    className={`w-full text-left px-4 py-2 text-sm hover:bg-secondary transition-colors ${
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors ${
                       selectedLang.code === lang.code ? "text-accent font-medium" : "text-foreground"
                     }`}
                   >
@@ -117,12 +117,12 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           </div>
 
           {/* Dark/Light Toggle */}
-          <button onClick={toggleDark} className="p-2 transition-colors rounded-lg hover:bg-accent text-slate-200 dark:text-slate-100">
+          <button onClick={toggleDark} className="p-2 transition-colors rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 text-slate-200 dark:text-slate-100">
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
 
           {/* Cart */}
-          <button className="p-2 rounded-lg hover:bg-accent transition-colors text-slate-200 dark:text-slate-100 relative">
+          <button className="p-2 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors text-slate-200 dark:text-slate-100 relative">
             <ShoppingCart className="w-4 h-4" />
           </button>
         </div>
