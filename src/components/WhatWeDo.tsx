@@ -50,7 +50,7 @@ const ServiceCard = ({ service, index }: {service: typeof services[0];index: num
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true, margin: "-50px" }}
-      className="card-service bg-card group"
+      className="card-service bg-slate-100 dark:bg-slate-700 group"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}>
 

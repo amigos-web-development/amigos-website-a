@@ -2,15 +2,17 @@ import { useState, useRef, useEffect } from "react";
 import { ChevronDown, LogIn, UserPlus, Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
+import { Compass, HardHat, Waves, CloudSun, Mountain, Droplets, FlaskConical, TestTubeDiagonal } from "lucide-react";
+
 const productCategories = [
-  "Land Surveying Instrument",
-  "Construction Materials Testing Instrument",
-  "Bathymetric & Hydrographic Surveying Instrument",
-  "Weather, Environmental & Horticulture Instrument",
-  "Geological & Earth Exploration Instrument",
-  "Air & Water Quality Testing Instrument",
-  "Laboratory & Scientific Instrument",
-  "Analytical Testing Instrument",
+  { label: "Land Surveying Instrument", icon: Compass },
+  { label: "Construction Materials Testing Instrument", icon: HardHat },
+  { label: "Bathymetric & Hydrographic Surveying Instrument", icon: Waves },
+  { label: "Weather, Environmental & Horticulture Instrument", icon: CloudSun },
+  { label: "Geological & Earth Exploration Instrument", icon: Mountain },
+  { label: "Air & Water Quality Testing Instrument", icon: Droplets },
+  { label: "Laboratory & Scientific Instrument", icon: FlaskConical },
+  { label: "Analytical Testing Instrument", icon: TestTubeDiagonal },
 ];
 
 const navLinks = [
@@ -55,16 +57,19 @@ const MainNavBar = () => {
                   />
                 </button>
                 {productsOpen && (
-                  <div className="absolute left-0 top-full mt-0.5 bg-card border border-border rounded-lg shadow-xl py-2 z-50 animate-scale-in min-w-[340px]">
-                    {productCategories.map((cat) => (
-                      <a
-                        key={cat}
-                        href="#"
-                        className="block px-5 py-2.5 text-sm text-foreground hover:bg-accent transition-colors"
-                      >
-                        {cat}
-                      </a>
-                    ))}
+                  <div className="absolute left-0 top-full mt-2 bg-card border border-border rounded-lg shadow-xl p-4 z-50 animate-scale-in min-w-[520px]">
+                    <div className="grid grid-cols-2 gap-2">
+                      {productCategories.map((cat) => (
+                        <a
+                          key={cat.label}
+                          href="#"
+                          className="flex items-center gap-3 px-4 py-3 text-sm text-foreground hover:bg-accent rounded-lg transition-colors"
+                        >
+                          <cat.icon className="w-4 h-4 flex-shrink-0 text-muted-foreground" />
+                          {cat.label}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -125,11 +130,12 @@ const MainNavBar = () => {
                     <div className="ml-4 mt-1 space-y-1">
                       {productCategories.map((cat) => (
                         <a
-                          key={cat}
+                          key={cat.label}
                           href="#"
-                          className="block px-3 py-1.5 text-sm text-muted-foreground hover:text-accent"
+                          className="flex items-center gap-2 px-3 py-1.5 text-sm text-muted-foreground hover:text-accent"
                         >
-                          {cat}
+                          <cat.icon className="w-4 h-4 flex-shrink-0" />
+                          {cat.label}
                         </a>
                       ))}
                     </div>
