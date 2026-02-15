@@ -1,18 +1,27 @@
 import { useEffect, useRef, useCallback } from "react";
-import { ArrowRight, ArrowLeft, Compass, HardHat, Ship, CloudSun, Mountain, Droplets, FlaskConical, TestTubeDiagonal, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Compass, HardHat, Ship, CloudSun, Mountain, Droplets, FlaskConical, TestTubeDiagonal } from "lucide-react";
+
+import catLandSurveying from "@/assets/cat_land_surveying.jpg";
+import catConstruction from "@/assets/cat_construction.jpg";
+import catBathymetric from "@/assets/cat_bathymetric.jpg";
+import catWeather from "@/assets/cat_weather.jpg";
+import catGeological from "@/assets/cat_geological.jpg";
+import catWaterQuality from "@/assets/cat_water_quality.jpg";
+import catLaboratory from "@/assets/cat_laboratory.jpg";
+import catAnalytical from "@/assets/cat_analytical.jpg";
 
 const categories = [
-  { name: "Land Surveying Instrument", icon: Compass },
-  { name: "Construction Materials Testing Instrument", icon: HardHat },
-  { name: "Bathymetric & Hydrographic Surveying Instrument", icon: Ship },
-  { name: "Weather, Environmental & Horticulture Instrument", icon: CloudSun },
-  { name: "Geological & Earth Exploration Instrument", icon: Mountain },
-  { name: "Air & Water Quality Testing Instrument", icon: Droplets },
-  { name: "Laboratory & Scientific Instrument", icon: FlaskConical },
-  { name: "Analytical Testing Instrument", icon: TestTubeDiagonal },
+  { name: "Land Surveying Instrument", icon: Compass, image: catLandSurveying },
+  { name: "Construction Materials Testing Instrument", icon: HardHat, image: catConstruction },
+  { name: "Bathymetric & Hydrographic Surveying Instrument", icon: Ship, image: catBathymetric },
+  { name: "Weather, Environmental & Horticulture Instrument", icon: CloudSun, image: catWeather },
+  { name: "Geological & Earth Exploration Instrument", icon: Mountain, image: catGeological },
+  { name: "Air & Water Quality Testing Instrument", icon: Droplets, image: catWaterQuality },
+  { name: "Laboratory & Scientific Instrument", icon: FlaskConical, image: catLaboratory },
+  { name: "Analytical Testing Instrument", icon: TestTubeDiagonal, image: catAnalytical },
 ];
 
-const CARD_WIDTH = 260 + 20; // card width + gap
+const CARD_WIDTH = 260 + 20;
 
 const KeyProductCategories = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -65,12 +74,12 @@ const KeyProductCategories = () => {
   const items = [...categories, ...categories];
 
   return (
-    <section className="py-16 bg-secondary/30">
+    <section className="py-16 category-gradient">
       <div className="container mx-auto px-4 mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
           Key Product Categories
         </h2>
-        <p className="text-muted-foreground text-center mt-3 max-w-2xl mx-auto">
+        <p className="text-white/80 text-center mt-3 max-w-2xl mx-auto">
           Explore our comprehensive range of professional-grade instruments across eight specialized categories.
         </p>
       </div>
@@ -78,7 +87,7 @@ const KeyProductCategories = () => {
       <div className="relative">
         <button
           onClick={() => scrollBy(-1)}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card/80 backdrop-blur border border-border shadow-md flex items-center justify-center text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur border border-white/30 shadow-md flex items-center justify-center text-white hover:bg-white/30 transition-colors"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
@@ -87,36 +96,40 @@ const KeyProductCategories = () => {
           className="flex gap-5 overflow-hidden px-4"
           style={{ scrollBehavior: "auto" }}
         >
-        {items.map((cat, i) => {
-          const Icon = cat.icon;
-          return (
-            <a
-              key={i}
-              href="#"
-              className="group flex-shrink-0 w-[260px] bg-card border border-border rounded-lg p-6 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:border-accent/40"
-            >
-              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors duration-300">
-                <Icon className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-sm font-semibold text-foreground leading-snug mb-4 min-h-[40px]">
-                {cat.name}
-              </h3>
-              <div className="relative h-9 w-full overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:-translate-x-full">
-                  <ArrowRight className="w-5 h-5 text-accent" />
+          {items.map((cat, i) => {
+            const Icon = cat.icon;
+            return (
+              <a
+                key={i}
+                href="#"
+                className="group flex-shrink-0 w-[260px] rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg relative"
+              >
+                {/* Background image */}
+                <div className="absolute inset-0">
+                  <img src={cat.image} alt="" className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-300" />
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center gap-1.5 translate-x-full transition-transform duration-300 group-hover:translate-x-0">
-                  <span className="text-sm font-medium text-accent">View Products</span>
-                  <ArrowRight className="w-4 h-4 text-accent" />
+
+                {/* Content - left aligned */}
+                <div className="relative z-10 p-6 flex flex-col items-start text-left min-h-[200px]">
+                  <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-4 group-hover:bg-white/30 transition-colors duration-300">
+                    <Icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-white leading-snug mb-4 min-h-[40px]">
+                    {cat.name}
+                  </h3>
+                  <div className="mt-auto flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-sm font-medium text-white">View Products</span>
+                    <ArrowRight className="w-4 h-4 text-white" />
+                  </div>
                 </div>
-              </div>
-            </a>
-          );
-        })}
+              </a>
+            );
+          })}
         </div>
         <button
           onClick={() => scrollBy(1)}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card/80 backdrop-blur border border-border shadow-md flex items-center justify-center text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur border border-white/30 shadow-md flex items-center justify-center text-white hover:bg-white/30 transition-colors"
         >
           <ChevronRight className="w-5 h-5" />
         </button>
