@@ -110,8 +110,9 @@
   .hero-gradient-overlay {
     background: linear-gradient(
       135deg,
-      hsla(var(--hero-overlay), 0.75) 0%,
-      hsla(var(--hero-overlay), 0.4) 50%,
+      hsla(220, 80%, 30%, 0.6) 0%,
+      hsla(350, 70%, 45%, 0.4) 40%,
+      hsla(25, 90%, 50%, 0.35) 70%,
       hsla(var(--hero-overlay), 0.2) 100%
     );
   }
