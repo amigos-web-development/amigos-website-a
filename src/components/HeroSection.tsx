@@ -32,7 +32,7 @@ const HeroSection = () => {
           className="absolute inset-0"
         >
           <img src={slides[current].bg} alt="" className="w-full h-full object-cover animate-hero-zoom" />
-          <div className="absolute inset-1 hero-gradient-overlay" />
+          <div className="absolute inset-0 hero-gradient-overlay" />
         </motion.div>
       </AnimatePresence>
 
