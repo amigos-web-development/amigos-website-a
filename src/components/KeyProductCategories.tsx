@@ -113,7 +113,7 @@ const KeyProductCategories = () => {
                 {/* Background image */}
                 <div className="absolute inset-0">
                   <img src={cat.image} alt="" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-black/70 group-hover:bg-black/40 transition-colors duration-300" />
                 </div>
 
                 {/* Content - left aligned */}
