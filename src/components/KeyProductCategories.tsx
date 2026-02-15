@@ -1,5 +1,17 @@
 import { useEffect, useRef, useCallback } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight, Compass, HardHat, Ship, CloudSun, Mountain, Droplets, FlaskConical, TestTubeDiagonal } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronLeft,
+  ChevronRight,
+  Compass,
+  HardHat,
+  Ship,
+  CloudSun,
+  Mountain,
+  Droplets,
+  FlaskConical,
+  TestTubeDiagonal,
+} from "lucide-react";
 
 import catLandSurveying from "@/assets/cat_land_surveying.jpg";
 import catConstruction from "@/assets/cat_construction.jpg";
@@ -74,11 +86,9 @@ const KeyProductCategories = () => {
   const items = [...categories, ...categories];
 
   return (
-    <section className="py-16 category-gradient">
+    <section className="py-16 category-gradient/70">
       <div className="container mx-auto px-4 mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
-          Key Product Categories
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center">Key Product Categories</h2>
         <p className="text-white/80 text-center mt-3 max-w-2xl mx-auto">
           Explore our comprehensive range of professional-grade instruments across eight specialized categories.
         </p>
@@ -91,11 +101,7 @@ const KeyProductCategories = () => {
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
-        <div
-          ref={scrollRef}
-          className="flex gap-5 overflow-hidden px-4"
-          style={{ scrollBehavior: "auto" }}
-        >
+        <div ref={scrollRef} className="flex gap-5 overflow-hidden px-4" style={{ scrollBehavior: "auto" }}>
           {items.map((cat, i) => {
             const Icon = cat.icon;
             return (
@@ -115,9 +121,7 @@ const KeyProductCategories = () => {
                   <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-4 group-hover:bg-white/30 transition-colors duration-300">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-sm font-semibold text-white leading-snug mb-4 min-h-[40px]">
-                    {cat.name}
-                  </h3>
+                  <h3 className="text-sm font-semibold text-white leading-snug mb-4 min-h-[40px]">{cat.name}</h3>
                   <div className="mt-auto flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-sm font-medium text-white">View Products</span>
                     <ArrowRight className="w-4 h-4 text-white" />
