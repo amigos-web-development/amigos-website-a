@@ -26,7 +26,7 @@ const CTASection = () => {
     <section className="py-20">
       <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">How Can We Help You?</h2>
-        <p className="text-white/80 text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-muted-foreground mb-12 max-w-2xl mx-auto">
           Choose the best way to connect with us and let our team assist you.
         </p>
 
@@ -34,13 +34,13 @@ const CTASection = () => {
           {ctaItems.map((item) => (
             <div
               key={item.title}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
+              className="test-foreground backdrop-blur-sm border border-white/20 rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
             >
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-white/15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <item.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-              <p className="text-white/75 mb-6 leading-relaxed">{item.description}</p>
+              <h3 className="text-xl font-bold text-muted-foreground mb-3">{item.title}</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">{item.description}</p>
               <a
                 href="#"
                 className="inline-block px-6 py-3 bg-slate-800 text-slate-200 font-semibold rounded-lg hover:opacity-85 transition-all duration-300"
