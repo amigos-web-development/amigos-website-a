@@ -78,7 +78,7 @@ const Partners = () => {
         {items.map((logo, i) =>
         <div
           key={i}
-          className="flex-shrink-0 w-[180px] h-[100px] flex items-center justify-center bg-slate-100 dark:bg-slate-700 rounded-lg p-4 border-border px-[4px] py-[4px] border-0 shadow-lg">
+          className="flex-shrink-0 w-[180px] h-[100px] flex items-center justify-center bg-slate-100 dark:bg-slate-700/50 rounded-lg p-4 border-border px-[4px] py-[4px] border-0 shadow-lg">
 
             <img
             src={logo.src}
