@@ -72,7 +72,7 @@ const Partners = () => {
       </div>
       <div
         ref={scrollRef}
-        className="flex gap-12 items-center overflow-hidden px-4"
+        className="flex gap-12 items-center overflow-hidden px-4 py-[8px]"
         style={{ scrollBehavior: "auto" }}>
 
         {items.map((logo, i) =>
