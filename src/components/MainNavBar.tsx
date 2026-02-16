@@ -38,8 +38,8 @@ const MainNavBar = () => {
 
   return (
     <>
-      <div ref={navRef}>
-        <nav className="bg-nav-bg border-b border-nav-border sticky top-0 z-40 shadow-sm">
+      <div ref={navRef} className="sticky top-0 z-40">
+        <nav className="bg-nav-bg border-b border-nav-border shadow-sm">
           <div className="container mx-auto flex items-center justify-between h-16 px-4" style={{ maxWidth: "80%" }}>
             {/* Left: Logo + Nav links */}
             <div className="hidden lg:flex items-center gap-1">
