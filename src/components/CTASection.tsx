@@ -36,7 +36,7 @@ const CTASection = () => {
               key={item.title}
               className="test-foreground backdrop-blur-sm border border-white/20 rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-background flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <item.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-muted-foreground mb-3">{item.title}</h3>
