@@ -98,7 +98,7 @@ const Testimonials = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}>
 
-      <div className="w-[90%] mx-auto px-4 mb-12">
+      <div className="container mx-auto px-4 mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">What Our Clients Say</h2>
         <p className="text-muted-foreground text-center mt-3 max-w-2xl mx-auto">
           Trusted by leading organizations across Myanmar for precision instruments and reliable support.
