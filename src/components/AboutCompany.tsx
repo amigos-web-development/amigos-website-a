@@ -15,9 +15,15 @@ const AboutCompany = () => {
             className="px-20 inline-block flex flex-col justify-center"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              <span className="block bg-gradient-to-r from-blue-600 via-indigo-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent">About</span>
-              <span className="block bg-gradient-to-r from-blue-600 via-indigo-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent">Amigos International</span>
-              <span className="block bg-gradient-to-r from-blue-600 via-indigo-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent">Co., Ltd.</span>
+              <span className="block bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 bg-clip-text text-transparent">
+                About
+              </span>
+              <span className="block bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 bg-clip-text text-transparent">
+                Amigos International
+              </span>
+              <span className="block bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 bg-clip-text text-transparent">
+                Co., Ltd.
+              </span>
             </h2>
             <div className="w-24 h-1 bg-accent mt-6 rounded-full" />
           </motion.div>
