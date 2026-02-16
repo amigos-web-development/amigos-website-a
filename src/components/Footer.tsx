@@ -12,7 +12,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {["Home", "Products", "Services", "Career", "About Us", "Contact Us"].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-sm hover:text-footer-accent transition-colors">
+                  <a href="#" className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors">
                     {item}
                   </a>
                 </li>
@@ -26,7 +26,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {["View All Jobs", "Development Programs", "Trainings", "Internship Programs"].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-sm hover:text-footer-accent transition-colors">
+                  <a href="#" className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors">
                     {item}
                   </a>
                 </li>
@@ -40,7 +40,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {["Research & Development", "Event", "CSR Activity", "Staff Party", "Business Insight"].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-sm hover:text-footer-accent transition-colors">
+                  <a href="#" className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors">
                     {item}
                   </a>
                 </li>
@@ -54,7 +54,7 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {["Yangon Head Office", "Mandalay Office", "Naypyitaw Office", "Taung Gyi Office"].map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-sm hover:text-footer-accent transition-colors">
+                  <a href="#" className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors">
                     {item}
                   </a>
                 </li>
@@ -68,25 +68,25 @@ const Footer = () => {
             <div className="flex gap-3 mb-3">
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-footer-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-footer-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
               >
                 <Youtube className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-footer-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-footer-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
                 title="TikTok"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -97,28 +97,28 @@ const Footer = () => {
             <div className="flex gap-3 mb-5">
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-footer-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
                 title="Messenger"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-footer-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
                 title="Viber"
               >
                 <Phone className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-footer-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
                 title="WhatsApp"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-footer-accent hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
                 title="Telegram"
               >
                 <Send className="w-4 h-4" />

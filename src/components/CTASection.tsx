@@ -34,7 +34,7 @@ const CTASection = () => {
           {ctaItems.map((item) => (
             <div
               key={item.title}
-              className="test-foreground backdrop-blur-sm border border-white/20 rounded-xl p-8 text-center hover:bg-white/20 transition-all duration-300 group"
+              className="bg-slate-100 dark:bg-slate-700 border border-white/20 rounded-xl p-8 text-center hover:bg-slate-200 dark:hover:bg-slate-600 transition-all duration-300 group"
             >
               <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <item.icon className="w-8 h-8 text-white" />
@@ -43,7 +43,7 @@ const CTASection = () => {
               <p className="text-muted-foreground mb-6 leading-relaxed">{item.description}</p>
               <a
                 href="#"
-                className="inline-block px-6 py-3 bg-slate-800 text-slate-200 font-semibold rounded-lg hover:opacity-85 transition-all duration-300"
+                className="inline-block px-6 py-3 bg-slate-800 dark:bg-slate-600 text-slate-200 dark:text-slate-100 font-semibold rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-all duration-300"
               >
                 {item.buttonText}
               </a>
