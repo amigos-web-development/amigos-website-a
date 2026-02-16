@@ -105,7 +105,7 @@ const Testimonials = () => {
         </p>
       </div>
 
-      <div className="relative w-full" style={{ height: 340 }}>
+      <div className="relative w-full" style={{ height: 380 }}>
         <AnimatePresence mode="popLayout">
           {renderCard(prevIdx, "left")}
           {renderCard(current, "center")}
