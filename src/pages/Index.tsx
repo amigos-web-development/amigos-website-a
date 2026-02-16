@@ -26,8 +26,8 @@ const Index = () => {
       <KeyProductCategories />
       <AboutCompany />
       <Partners />
-      <Testimonials />
       <CTASection />
+      <Testimonials />
       <Footer />
     </div>
   );
