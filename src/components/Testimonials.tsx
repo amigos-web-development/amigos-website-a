@@ -94,7 +94,8 @@ const Testimonials = () => {
 
   return (
     <section
-      className="py-20 px-24 bg-secondary/20 overflow-hidden"
+      className="py-20 bg-secondary/20 overflow-hidden"
+      style={{ width: 90% }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
