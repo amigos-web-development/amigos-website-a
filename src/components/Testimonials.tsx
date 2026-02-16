@@ -60,8 +60,8 @@ const Testimonials = () => {
 
   const cardVariants = {
     center: { x: "0%", scale: 1, opacity: 1, zIndex: 20 },
-    left: { x: "85%", scale: 0.85, opacity: 0.5, zIndex: 10 },
-    right: { x: "-85%", scale: 0.85, opacity: 0.5, zIndex: 10 },
+    left: { x: "-85%", scale: 1, opacity: 0.5, zIndex: 10 },
+    right: { x: "85%", scale: 1, opacity: 0.5, zIndex: 10 },
     hidden: { x: "0%", scale: 0.7, opacity: 0, zIndex: 0 },
   };
 
