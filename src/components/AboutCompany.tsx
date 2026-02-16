@@ -15,13 +15,13 @@ const AboutCompany = () => {
             className="px-20 inline-block flex flex-col justify-center"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              <span className="block bg-gradient-to-r from-red-600 via-yellow-500 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-red-600 via-yellow-500 to-orange-600 bg-clip-text text-transparent">
                 About
               </span>
-              <span className="block bg-gradient-to-r from-red-600 via-yellow-500 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-red-600 via-yellow-500 to-orange-600 bg-clip-text text-transparent">
                 Amigos International
               </span>
-              <span className="block bg-gradient-to-r from-red-600 via-yellow-500 via-orange-500 to-orange-600 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-red-600 via-yellow-500 to-orange-600 bg-clip-text text-transparent">
                 Co., Ltd.
               </span>
             </h2>
