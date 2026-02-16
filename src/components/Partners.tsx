@@ -10,16 +10,16 @@ import partner8 from "@/assets/partner_8.jpg";
 import partner9 from "@/assets/partner_9.jpg";
 
 const logos = [
-  { src: partner1, alt: "Spectrum Technology Group" },
-  { src: partner2, alt: "IDS Ingegneria Dei Sistemi" },
-  { src: partner3, alt: "Olympus" },
-  { src: partner4, alt: "Myzox" },
-  { src: partner5, alt: "Hanna Instruments" },
-  { src: partner6, alt: "Humboldt" },
-  { src: partner7, alt: "Adam Equipment" },
-  { src: partner8, alt: "GeoMax" },
-  { src: partner9, alt: "Hi-Target" },
-];
+{ src: partner1, alt: "Spectrum Technology Group" },
+{ src: partner2, alt: "IDS Ingegneria Dei Sistemi" },
+{ src: partner3, alt: "Olympus" },
+{ src: partner4, alt: "Myzox" },
+{ src: partner5, alt: "Hanna Instruments" },
+{ src: partner6, alt: "Humboldt" },
+{ src: partner7, alt: "Adam Equipment" },
+{ src: partner8, alt: "GeoMax" },
+{ src: partner9, alt: "Hi-Target" }];
+
 
 const Partners = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -73,23 +73,23 @@ const Partners = () => {
       <div
         ref={scrollRef}
         className="flex gap-12 items-center overflow-hidden px-4"
-        style={{ scrollBehavior: "auto" }}
-      >
-        {items.map((logo, i) => (
-          <div
-            key={i}
-            className="flex-shrink-0 w-[180px] h-[100px] flex items-center justify-center bg-white rounded-lg p-4 shadow-sm border border-border"
-          >
+        style={{ scrollBehavior: "auto" }}>
+
+        {items.map((logo, i) =>
+        <div
+          key={i}
+          className="flex-shrink-0 w-[180px] h-[100px] flex items-center justify-center bg-slate-100 dark:bg-slate-700 rounded-lg p-4 shadow-sm border border-border">
+
             <img
-              src={logo.src}
-              alt={logo.alt}
-              className="max-w-full max-h-full object-contain"
-            />
+            src={logo.src}
+            alt={logo.alt}
+            className="max-w-full max-h-full object-contain" />
+
           </div>
-        ))}
+        )}
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Partners;
