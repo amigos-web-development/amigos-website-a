@@ -65,10 +65,7 @@ const Testimonials = () => {
     hidden: { x: "0%", scale: 0.7, opacity: 0, zIndex: 0 },
   };
 
-  const renderCard = (
-    idx: number,
-    variant: "center" | "left" | "right"
-  ) => {
+  const renderCard = (idx: number, variant: "center" | "left" | "right") => {
     const t = testimonials[idx];
     return (
       <motion.div
@@ -79,17 +76,11 @@ const Testimonials = () => {
         transition={{ duration: 0.6, ease: [0.42, 0, 0.58, 1] }}
         className="absolute w-[60%] left-[20%]"
       >
-        <div className="bg-card rounded-xl p-8 md:p-10 shadow-lg border border-border">
+        <div className="bg-slate-100 dark:bg-slate-700 rounded-xl p-8 md:p-10 shadow-lg border border-border">
           <Quote className="w-8 h-8 text-accent mb-4 opacity-60" />
-          <p className="text-foreground/90 text-base md:text-lg leading-relaxed mb-8 italic">
-            "{t.quote}"
-          </p>
+          <p className="text-foreground/90 text-base md:text-lg leading-relaxed mb-8 italic">"{t.quote}"</p>
           <div className="flex items-center gap-4">
-            <img
-              src={t.photo}
-              alt={t.name}
-              className="w-14 h-14 rounded-full object-cover border-2 border-accent/30"
-            />
+            <img src={t.photo} alt={t.name} className="w-14 h-14 rounded-full object-cover border-2 border-accent/30" />
             <div>
               <p className="font-semibold text-foreground">{t.name}</p>
               <p className="text-sm text-muted-foreground">{t.position}</p>
@@ -108,9 +99,7 @@ const Testimonials = () => {
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="container mx-auto px-4 mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">
-          What Our Clients Say
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center">What Our Clients Say</h2>
         <p className="text-muted-foreground text-center mt-3 max-w-2xl mx-auto">
           Trusted by leading organizations across Myanmar for precision instruments and reliable support.
         </p>
