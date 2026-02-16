@@ -14,10 +14,10 @@ const AboutCompany = () => {
             viewport={{ once: true }}
             className="px-20 inline-block flex flex-col justify-center"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-              <span className="block">About</span>
-              <span className="block">Amigos International</span>
-              <span className="block">Co., Ltd.</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <span className="block bg-gradient-to-r from-blue-600 via-indigo-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent">About</span>
+              <span className="block bg-gradient-to-r from-blue-600 via-indigo-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent">Amigos International</span>
+              <span className="block bg-gradient-to-r from-blue-600 via-indigo-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent">Co., Ltd.</span>
             </h2>
             <div className="w-24 h-1 bg-accent mt-6 rounded-full" />
           </motion.div>
@@ -53,7 +53,7 @@ const AboutCompany = () => {
                 </li>
               ))}
             </ul>
-            <button className="group flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:opacity-90">
+            <button className="group flex items-center gap-2 bg-slate-800 dark:bg-slate-600 text-slate-300 dark:text-slate-200 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:opacity-90">
               Read More
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
