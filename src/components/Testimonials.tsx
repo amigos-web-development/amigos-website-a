@@ -60,8 +60,8 @@ const Testimonials = () => {
 
   const cardVariants = {
     center: { x: "0%", scale: 1, opacity: 1, zIndex: 20 },
-    left: { x: "-95%", scale: 0.85, opacity: 0.5, zIndex: 10 },
-    right: { x: "95%", scale: 0.85, opacity: 0.5, zIndex: 10 },
+    left: { x: "-94%", scale: 0.85, opacity: 0.5, zIndex: 10 },
+    right: { x: "94%", scale: 0.85, opacity: 0.5, zIndex: 10 },
     hidden: { x: "0%", scale: 0.7, opacity: 0, zIndex: 0 },
   };
 
@@ -74,7 +74,7 @@ const Testimonials = () => {
         animate={variant}
         variants={cardVariants}
         transition={{ duration: 0.6, ease: [0.42, 0, 0.58, 1] }}
-        className="absolute w-[50%] left-[25%]"
+        className="absolute w-[60%] left-[20%]"
       >
         <div className="bg-slate-100 dark:bg-slate-700 rounded-xl p-8 md:p-10 shadow-lg border border-border">
           <Quote className="w-8 h-8 text-accent mb-4 opacity-60" />
