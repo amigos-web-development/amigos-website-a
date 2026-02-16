@@ -80,7 +80,7 @@ const Testimonials = () => {
           <Quote className="w-8 h-8 text-accent mb-4 opacity-60" />
           <p className="text-foreground/90 text-base md:text-lg leading-relaxed mb-8 italic">"{t.quote}"</p>
           <div className="flex items-center gap-4">
-            <img src={t.photo} alt={t.name} className="w-20 h-20 rounded-full object-cover border-2 border-accent/30" />
+            <img src={t.photo} alt={t.name} className="w-24 h-24 rounded-full object-cover border-2 border-accent/30" />
             <div>
               <p className="font-semibold text-foreground text-lg">{t.name}</p>
               <p className="text-md text-muted-foreground text-base">{t.position}</p>
