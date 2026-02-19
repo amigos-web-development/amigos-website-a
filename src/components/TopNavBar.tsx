@@ -3,11 +3,11 @@ import { Phone, Mail, Search, Globe, Moon, Sun, ShoppingCart, X, Facebook, Youtu
 import logo from "@/assets/logo.png";
 
 const languages = [
-  { code: "en", name: "English" },
-  { code: "mm", name: "Myanmar" },
-  { code: "zh", name: "Chinese" },
-  { code: "th", name: "Thailand" },
-];
+{ code: "en", name: "English" },
+{ code: "mm", name: "Myanmar" },
+{ code: "zh", name: "Chinese" },
+{ code: "th", name: "Thailand" }];
+
 
 interface TopNavBarProps {
   isDark: boolean;
@@ -35,11 +35,11 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
   }, []);
 
   return (
-    <div className="bg-slate-800 dark:bg-slate-600 border-b border-nav-border">
+    <div className="bg-slate-800 dark:bg-slate-600">
       <div
         className="container mx-auto flex items-center justify-between h-11 px-4 text-sm"
-        style={{ maxWidth: "80%" }}
-      >
+        style={{ maxWidth: "80%" }}>
+
         {/* Left: Social Icons */}
         <div className="hidden md:flex items-center gap-2 text-slate-200 dark:text-slate-100">
           <a href="#" className="p-1.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors">
@@ -74,64 +74,64 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         <div className="flex items-center gap-1">
           {/* Search */}
           <div className="relative rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 text-slate-200 dark:text-slate-100">
-            {searchOpen ? (
-              <div className="flex items-center bg-secondary rounded-lg overflow-hidden animate-scale-in">
+            {searchOpen ?
+            <div className="flex items-center bg-secondary rounded-lg overflow-hidden animate-scale-in">
                 <input
-                  ref={searchRef}
-                  type="text"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search..."
-                  className="bg-transparent px-3 py-1.5 text-sm outline-none w-48 text-foreground placeholder:text-muted-foreground"
-                />
+                ref={searchRef}
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search..."
+                className="bg-transparent px-3 py-1.5 text-sm outline-none w-48 text-foreground placeholder:text-muted-foreground" />
+
 
                 <button
-                  onClick={() => {
-                    setSearchOpen(false);
-                    setSearchQuery("");
-                  }}
-                  className="p-1.5 hover:text-accent transition-colors"
-                >
+                onClick={() => {
+                  setSearchOpen(false);
+                  setSearchQuery("");
+                }}
+                className="p-1.5 hover:text-accent transition-colors">
+
                   <X className="w-4 h-4" />
                 </button>
-              </div>
-            ) : (
-              <button
-                onClick={() => setSearchOpen(true)}
-                className="p-2 hover:text-accent transition-colors text-muted-foreground"
-              >
+              </div> :
+
+            <button
+              onClick={() => setSearchOpen(true)}
+              className="p-2 hover:text-accent transition-colors text-muted-foreground">
+
                 <Search className="w-4 h-4 rounded-lg hover:bg-accent text-slate-200 dark:text-slate-100" />
               </button>
-            )}
+            }
           </div>
 
           {/* Language */}
           <div ref={langRef} className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 p-2 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors text-slate-200 dark:text-slate-100"
-            >
+              className="flex items-center gap-1 p-2 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors text-slate-200 dark:text-slate-100">
+
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline text-xs">{selectedLang.name}</span>
             </button>
-            {langOpen && (
-                <div className="absolute right-0 top-full mt-1 bg-card border border-border rounded-lg shadow-lg py-1 z-50 animate-scale-in min-w-[140px]">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => {
-                      setSelectedLang(lang);
-                      setLangOpen(false);
-                    }}
-                    className={`w-full text-left px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors ${
-                      selectedLang.code === lang.code ? "text-accent font-medium" : "text-foreground"
-                    }`}
-                  >
+            {langOpen &&
+            <div className="absolute right-0 top-full mt-1 bg-card border border-border rounded-lg shadow-lg py-1 z-50 animate-scale-in min-w-[140px]">
+                {languages.map((lang) =>
+              <button
+                key={lang.code}
+                onClick={() => {
+                  setSelectedLang(lang);
+                  setLangOpen(false);
+                }}
+                className={`w-full text-left px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors ${
+                selectedLang.code === lang.code ? "text-accent font-medium" : "text-foreground"}`
+                }>
+
                     {lang.name}
                   </button>
-                ))}
+              )}
               </div>
-            )}
+            }
           </div>
 
           {/* Dark/Light Toggle */}
@@ -145,8 +145,8 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           </button>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default TopNavBar;
