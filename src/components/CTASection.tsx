@@ -36,7 +36,7 @@ const CTASection = () => {
           {ctaItems.map((item) =>
           <div
             key={item.title}
-            className="border border-slate-700/50 dark:border-slate-100/50 p-8 text-center transition-all duration-300 group cursor-pointer">
+            className="border border-slate-700/30 dark:border-slate-100/30 p-8 text-center transition-all duration-300 group cursor-pointer">
 
               <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <item.icon className="w-8 h-8 text-foreground" />
