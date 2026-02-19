@@ -34,7 +34,7 @@ const AboutCompany = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="col-span-2 px-20">
+            className="col-span-2 px-[40px]">
 
             <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
               Amigos International Co., Ltd. was established in 2010 and has grown over 14 years into one of Myanmar's
