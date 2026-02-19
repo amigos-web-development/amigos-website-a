@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Phone, Mail, Search, Globe, Moon, Sun, ShoppingCart, X } from "lucide-react";
+import { Phone, Mail, Search, Globe, Moon, Sun, ShoppingCart, X, Facebook, Youtube, Linkedin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const languages = [
@@ -40,13 +40,31 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         className="container mx-auto flex items-center justify-between h-11 px-4 text-sm"
         style={{ maxWidth: "80%" }}
       >
-        {/* Left: Phone & Email */}
-        <div className="hidden md:flex items-center gap-6 text-muted-foreground text-slate-200 dark:text-slate-300">
-          <a href="tel:01-3566717" className="flex items-center gap-1.5 transition-colors text-slate-200 dark:text-slate-100">
+        {/* Left: Social Icons */}
+        <div className="hidden md:flex items-center gap-2 text-slate-200 dark:text-slate-100">
+          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors">
+            <Facebook className="w-3.5 h-3.5" />
+          </a>
+          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors">
+            <Youtube className="w-3.5 h-3.5" />
+          </a>
+          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors">
+            <Linkedin className="w-3.5 h-3.5" />
+          </a>
+          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors" title="TikTok">
+            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.3 0 .59.04.86.12V9.01a6.27 6.27 0 0 0-.86-.06 6.34 6.34 0 0 0 0 12.68 6.34 6.34 0 0 0 6.34-6.34V9.06a8.16 8.16 0 0 0 4.77 1.52V7.13a4.85 4.85 0 0 1-1.01-.44z" />
+            </svg>
+          </a>
+        </div>
+
+        {/* Center: Phone & Email */}
+        <div className="hidden md:flex items-center gap-6 text-slate-200 dark:text-slate-100">
+          <a href="tel:01-3566717" className="flex items-center gap-1.5 transition-colors">
             <Phone className="w-3.5 h-3.5" />
             <span>01-3566717</span>
           </a>
-          <a href="mailto:support@amigosmyanmar.com" className="flex items-center gap-1.5 transition-colors text-slate-200 dark:text-slate-100">
+          <a href="mailto:support@amigosmyanmar.com" className="flex items-center gap-1.5 transition-colors">
             <Mail className="w-3.5 h-3.5" />
             <span>support@amigosmyanmar.com</span>
           </a>
