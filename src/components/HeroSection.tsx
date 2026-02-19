@@ -50,7 +50,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#"
-                className="px-6 py-3 bg-slate-800 dark:bg-slate-600 text-slate-300 dark:text-slate-200 font-semibold rounded-lg hover:opacity-85 transition-all duration-300 shadow-lg"
+                className="px-6 py-3 bg-gradient-to-r from-red-600 via-yellow-500 to-orange-600 text-white font-semibold rounded-lg hover:opacity-85 transition-all duration-300 shadow-lg"
               >
                 Contact Sales
               </a>
