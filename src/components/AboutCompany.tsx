@@ -36,13 +36,13 @@ const AboutCompany = () => {
             viewport={{ once: true }}
             className="col-span-2 px-20">
 
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
               Amigos International Co., Ltd. was established in 2010 and has grown over 14 years into one of Myanmar's
               most trusted providers of engineering and scientific solutions. We specialize in the distribution, sales,
               and professional after-sales support of high-quality instruments sourced from leading international
               manufacturers.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-muted-foreground leading-relaxed mb-4 text-lg">
               Our product expertise spans across multiple industries, including:
             </p>
             <ul className="space-y-2 mb-8">
@@ -53,7 +53,7 @@ const AboutCompany = () => {
               "Environmental & Weather Monitoring Systems",
               "Geological & Earth Exploration Instruments"].
               map((item) =>
-              <li key={item} className="flex items-center gap-3 text-muted-foreground">
+              <li key={item} className="flex items-center gap-3 text-muted-foreground text-lg">
                   <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                   {item}
                 </li>
