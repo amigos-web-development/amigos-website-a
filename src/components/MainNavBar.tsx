@@ -82,7 +82,7 @@ const MainNavBar = () => {
               </a>
               <a
                 href="#"
-                className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border border-white/30 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">
+                className="flex items-center gap-1.5 px-4 py-2 font-medium border border-white/30 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors text-base">
 
                 <UserPlus className="w-4 h-4" />
                 Register
