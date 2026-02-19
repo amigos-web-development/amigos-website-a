@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import heroBg1 from "@/assets/hero_background_1.jpg";
 import heroBg2 from "@/assets/hero_background_2.jpg";
 import heroBg3 from "@/assets/hero_background_3.jpg";
-import TopNavBar from "@/components/TopNavBar";
 
 const slides = [
   { bg: heroBg1, description: "We are deeply committed to customer satisfaction and long-term technical support." },
@@ -11,12 +10,7 @@ const slides = [
   { bg: heroBg3, description: "We are deeply committed to customer satisfaction and long-term technical support." },
 ];
 
-interface HeroSectionProps {
-  isDark: boolean;
-  toggleDark: () => void;
-}
-
-const HeroSection = ({ isDark, toggleDark }: HeroSectionProps) => {
+const HeroSection = () => {
   const [current, setCurrent] = useState(0);
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
@@ -41,11 +35,6 @@ const HeroSection = ({ isDark, toggleDark }: HeroSectionProps) => {
           <div className="absolute inset-0 hero-gradient-overlay" />
         </motion.div>
       </AnimatePresence>
-
-      {/* Top Nav */}
-      <div className="relative z-10">
-        <TopNavBar isDark={isDark} toggleDark={toggleDark} />
-      </div>
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center">
