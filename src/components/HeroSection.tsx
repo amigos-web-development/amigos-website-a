@@ -21,7 +21,7 @@ const HeroSection = () => {
   }, [next]);
 
   return (
-    <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+    <section className="relative h-[75vh] min-h-[550px] overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
