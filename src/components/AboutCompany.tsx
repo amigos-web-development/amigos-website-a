@@ -59,7 +59,7 @@ const AboutCompany = () => {
                 </li>
               )}
             </ul>
-            <button className="group flex items-center gap-2 gradient(135deg,_#1d4ed8,_#dc2626,_#f97316)] font-semibold text-slate-300 dark:text-slate-200 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:opacity-90">
+            <button className="group flex items-center gap-2 gradient(135deg,_#1d4ed8,_#dc2626,_#f97316)] font-semibold text-slate-100 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:opacity-90">
               Read More
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
