@@ -20,8 +20,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <TopNavBar isDark={isDark} toggleDark={() => setIsDark(!isDark)} />
-      <MainNavBar />
-      <HeroSection />
+      <div className="relative">
+        <div className="absolute top-0 left-0 right-0 z-40">
+          <MainNavBar />
+        </div>
+        <HeroSection />
+      </div>
       <WhatWeDo />
       <KeyProductCategories />
       <AboutCompany />

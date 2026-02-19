@@ -38,8 +38,8 @@ const MainNavBar = () => {
 
   return (
     <>
-      <div ref={navRef} className="sticky top-0 z-40">
-        <nav className="bg-nav-bg border-b border-nav-border shadow-sm">
+      <div ref={navRef} className="relative z-40">
+        <nav className="bg-transparent border-b border-white/10">
           <div className="container mx-auto flex items-center justify-between h-16 px-4" style={{ maxWidth: "80%" }}>
             {/* Left: Logo + Nav links */}
             <div className="hidden lg:flex items-center gap-1">
@@ -51,7 +51,7 @@ const MainNavBar = () => {
                   <div key={link.label} className="relative">
                     <button
                       onClick={() => setProductsOpen(!productsOpen)}
-                      className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                      className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors"
                     >
                       {link.label}
                       <ChevronDown
@@ -63,7 +63,7 @@ const MainNavBar = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    className="px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors"
                   >
                     {link.label}
                   </a>
@@ -75,14 +75,14 @@ const MainNavBar = () => {
             <div className="hidden lg:flex items-center gap-2">
               <a
                 href="#"
-                className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors"
               >
                 <LogIn className="w-4 h-4" />
                 Login
               </a>
               <a
                 href="#"
-                className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border border-border rounded-lg bg-slate-800 dark:bg-slate-600 hover:bg-slate-700 dark:hover:bg-slate-500 text-slate-200 dark:text-slate-100 transition-colors"
+                className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border border-white/30 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors"
               >
                 <UserPlus className="w-4 h-4" />
                 Register
