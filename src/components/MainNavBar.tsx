@@ -31,7 +31,7 @@ const navLinks = [
   { label: "Products", hasDropdown: true },
   { label: "Services", href: "#services" },
   { label: "Career", href: "#" },
-  { label: "About Us", href: "#" },
+  { label: "About Us", href: "/about-us" },
   { label: "Contact Us", href: "#" },
 ];
 
