@@ -7,7 +7,7 @@ type ThemeMode = "system" | "light" | "dark";
 const Footer = () => {
   const [themeMode, setThemeMode] = useState<ThemeMode>(() => {
     if (typeof window !== "undefined") {
-      return (localStorage.getItem("theme-mode") as ThemeMode) || "system";
+      return localStorage.getItem("theme-mode") as ThemeMode || "system";
     }
     return "system";
   });
@@ -161,25 +161,25 @@ const Footer = () => {
             <img src={logo} alt="Amigos International" className="h-10 brightness-1 invert-10 opacity-80" />
 
             {/* Theme Toggle */}
-            <div className="flex items-center gap-1 mt-4 bg-footer-foreground/10 rounded-lg p-1">
-              {([
-                { mode: "system" as ThemeMode, icon: Monitor, label: "System" },
-                { mode: "light" as ThemeMode, icon: Sun, label: "Light" },
-                { mode: "dark" as ThemeMode, icon: Moon, label: "Dark" },
-              ]).map(({ mode, icon: Icon, label }) => (
-                <button
-                  key={mode}
-                  onClick={() => setThemeMode(mode)}
-                  className={`p-2 rounded-md transition-all duration-200 ${
-                    themeMode === mode
-                      ? "bg-accent text-accent-foreground shadow-sm"
-                      : "text-footer-foreground/70 hover:text-footer-foreground"
-                  }`}
-                  title={label}
-                >
+            <div className="flex items-center mt-4 bg-footer-foreground/10 rounded-lg p-1 gap-[2px]">
+              {[
+              { mode: "system" as ThemeMode, icon: Monitor, label: "System" },
+              { mode: "light" as ThemeMode, icon: Sun, label: "Light" },
+              { mode: "dark" as ThemeMode, icon: Moon, label: "Dark" }].
+              map(({ mode, icon: Icon, label }) =>
+              <button
+                key={mode}
+                onClick={() => setThemeMode(mode)}
+                className={`p-2 rounded-md transition-all duration-200 ${
+                themeMode === mode ?
+                "bg-accent text-accent-foreground shadow-sm" :
+                "text-footer-foreground/70 hover:text-footer-foreground"}`
+                }
+                title={label}>
+
                   <Icon className="w-4 h-4" />
                 </button>
-              ))}
+              )}
             </div>
           </div>
         </div>
