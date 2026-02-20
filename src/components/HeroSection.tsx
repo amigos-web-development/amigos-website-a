@@ -56,7 +56,7 @@ const HeroSection = () => {
               </a>
               <a
                 href="#"
-                className="px-6 py-3 border-2 border-slate-200/50 hover:border-slate-800 text-slate-200 hover:bg-slate-800/40 font-semibold rounded-lg transition-all duration-300"
+                className="px-6 py-3 border-2 border-slate-200/50 hover:border-slate-800 hover:bg-[linear-gradient(135deg,_#222,_#444,_#555, 0.4)] text-slate-200 font-semibold rounded-lg transition-all duration-300"
               >
                 View Products
               </a>
