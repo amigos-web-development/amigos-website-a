@@ -53,7 +53,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           </a>
           <a
             href="#"
-            className="p-1.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors"
+            className="p-1.5 rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 transition-colors"
             title="TikTok"
           >
             <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
           {/* Search */}
-          <div className="relative rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 text-slate-800 dark:text-slate-200">
+          <div className="relative rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-200">
             {searchOpen ? (
               <div className="flex items-center bg-secondary rounded-lg overflow-hidden animate-scale-in">
                 <input
@@ -104,7 +104,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
                 onClick={() => setSearchOpen(true)}
                 className="p-2 hover:text-accent transition-colors text-muted-foreground"
               >
-                <Search className="w-4 h-4 rounded-lg hover:bg-accent text-slate-200 dark:text-slate-100" />
+                <Search className="w-4 h-4 rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 text-slate-200 dark:text-slate-800" />
               </button>
             )}
           </div>
@@ -113,7 +113,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           <div ref={langRef} className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 p-2 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors text-slate-800 dark:text-slate-200"
+              className="flex items-center gap-1 p-2 rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 transition-colors text-slate-800 dark:text-slate-200"
             >
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline text-xs">{selectedLang.name}</span>
@@ -127,7 +127,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
                       setSelectedLang(lang);
                       setLangOpen(false);
                     }}
-                    className={`w-full text-left px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors ${
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-slate-400 dark:hover:bg-slate-600 rounded-lg transition-colors ${
                       selectedLang.code === lang.code ? "text-accent font-medium" : "text-foreground"
                     }`}
                   >
@@ -141,7 +141,7 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
           {/* Dark/Light Toggle */}
           <button
             onClick={toggleDark}
-            className="p-2 transition-colors rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 text-slate-800 dark:text-slate-200"
+            className="p-2 transition-colors rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-200"
           >
             {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
