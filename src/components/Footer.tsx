@@ -1,7 +1,38 @@
-import { Facebook, Youtube, Linkedin, MessageCircle, Send, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Facebook, Youtube, Linkedin, MessageCircle, Send, Phone, Sun, Moon, Monitor } from "lucide-react";
 import logo from "@/assets/logo.png";
 
+type ThemeMode = "system" | "light" | "dark";
+
 const Footer = () => {
+  const [themeMode, setThemeMode] = useState<ThemeMode>(() => {
+    if (typeof window !== "undefined") {
+      return (localStorage.getItem("theme-mode") as ThemeMode) || "system";
+    }
+    return "system";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("theme-mode", themeMode);
+    if (themeMode === "system") {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.toggle("dark", prefersDark);
+    } else {
+      document.documentElement.classList.toggle("dark", themeMode === "dark");
+    }
+  }, [themeMode]);
+
+  // Listen for system preference changes when in system mode
+  useEffect(() => {
+    if (themeMode !== "system") return;
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const handler = (e: MediaQueryListEvent) => {
+      document.documentElement.classList.toggle("dark", e.matches);
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, [themeMode]);
+
   return (
     <footer className="footer-gradient text-footer-foreground">
       <div className="mx-auto py-16 px-4" style={{ maxWidth: "80%" }}>
@@ -128,6 +159,29 @@ const Footer = () => {
               We are deeply committed to customer satisfaction and long-term technical support.
             </p>
             <img src={logo} alt="Amigos International" className="h-10 brightness-1 invert-10 opacity-80" />
+
+            {/* Theme Toggle */}
+            <div className="flex items-center gap-1 mt-4 bg-footer-foreground/10 rounded-lg p-1">
+              {([
+                { mode: "system" as ThemeMode, icon: Monitor, label: "System" },
+                { mode: "light" as ThemeMode, icon: Sun, label: "Light" },
+                { mode: "dark" as ThemeMode, icon: Moon, label: "Dark" },
+              ]).map(({ mode, icon: Icon, label }) => (
+                <button
+                  key={mode}
+                  onClick={() => setThemeMode(mode)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-200 ${
+                    themeMode === mode
+                      ? "bg-accent text-accent-foreground shadow-sm"
+                      : "text-footer-foreground/70 hover:text-footer-foreground"
+                  }`}
+                  title={label}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">{label}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
