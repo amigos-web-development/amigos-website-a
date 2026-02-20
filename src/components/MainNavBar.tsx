@@ -39,7 +39,7 @@ const MainNavBar = () => {
   return (
     <>
       <div ref={navRef} className="relative z-40">
-        <nav className="bg-transparent border-b border-white/10">
+        <nav className="bg-transparent">
           <div className="container mx-auto flex items-center justify-between h-16 px-4 py-[16px]" style={{ maxWidth: "80%" }}>
             {/* Left: Logo + Nav links */}
             <div className="hidden lg:flex items-center gap-1">
