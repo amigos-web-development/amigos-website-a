@@ -170,15 +170,14 @@ const Footer = () => {
                 <button
                   key={mode}
                   onClick={() => setThemeMode(mode)}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all duration-200 ${
+                  className={`p-2 rounded-md transition-all duration-200 ${
                     themeMode === mode
                       ? "bg-accent text-accent-foreground shadow-sm"
                       : "text-footer-foreground/70 hover:text-footer-foreground"
                   }`}
                   title={label}
                 >
-                  <Icon className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">{label}</span>
+                  <Icon className="w-4 h-4" />
                 </button>
               ))}
             </div>
