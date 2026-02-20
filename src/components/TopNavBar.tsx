@@ -42,13 +42,13 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
       >
         {/* Left: Social Icons */}
         <div className="hidden md:flex items-center gap-2 text-slate-800 dark:text-slate-200">
-          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors">
+          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 transition-colors">
             <Facebook className="w-3.5 h-3.5" />
           </a>
-          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors">
+          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 transition-colors">
             <Youtube className="w-3.5 h-3.5" />
           </a>
-          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors">
+          <a href="#" className="p-1.5 rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 transition-colors">
             <Linkedin className="w-3.5 h-3.5" />
           </a>
           <a
