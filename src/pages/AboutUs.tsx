@@ -4,6 +4,8 @@ import { ArrowRight, Eye, Target, Package, Wrench, Handshake, Leaf } from "lucid
 import TopNavBar from "@/components/TopNavBar";
 import MainNavBar from "@/components/MainNavBar";
 import Footer from "@/components/Footer";
+import AboutPartners from "@/components/about/AboutPartners";
+import AboutAchievements from "@/components/about/AboutAchievements";
 import aboutHero from "@/assets/about_hero.jpg";
 import valueWorkHard from "@/assets/value_work_hard.jpg";
 import valueQuality from "@/assets/value_quality.jpg";
@@ -224,6 +226,9 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      <AboutPartners />
+      <AboutAchievements />
 
       <Footer />
     </div>
