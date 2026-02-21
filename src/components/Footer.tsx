@@ -34,7 +34,7 @@ const Footer = () => {
   }, [themeMode]);
 
   return (
-    <footer className="footer-gradient text-footer-foreground bg-slate-200 dark:bg-slate-800">
+    <footer className="footer-gradient text-footer-foreground">
       <div className="mx-auto py-16 px-4" style={{ maxWidth: "80%" }}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Resources */}
