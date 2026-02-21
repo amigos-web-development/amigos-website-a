@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Roboto"', 'system-ui', 'sans-serif'],
-        heading: ['"Lato"', 'system-ui', 'sans-serif'],
+        heading: ['"Trebuchet MS"', '"Lucida Sans Unicode"', '"Lucida Grande"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
