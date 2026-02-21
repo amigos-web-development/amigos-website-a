@@ -115,7 +115,7 @@ const MainNavBar = () => {
 
           {/* Full-width Mega Menu */}
           {productsOpen && (
-            <div className="hidden lg:block absolute left-0 right-0 bg-card border-b border-border shadow-2xl z-50 animate-fade-in">
+            <div className="hidden lg:block absolute left-0 right-0 bg-slate-200 dark:bg-slate-800 border-b border-border shadow-2xl z-50 animate-fade-in">
               <div className="container mx-auto px-4 py-8" style={{ maxWidth: "80%" }}>
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-6">
                   Product Categories
