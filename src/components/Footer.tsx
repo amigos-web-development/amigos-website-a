@@ -193,7 +193,7 @@ const Footer = () => {
                   key={mode}
                   onClick={() => setThemeMode(mode)}
                   className={`p-2 text-slate-800/80 dark:text-slate-200/80 rounded-md transition-all duration-200 ${
-                    themeMode === mode ? "bg-slate-500 dark:bg-slate-600 text-slate-200/80 shadow-sm" : ""
+                    themeMode === mode ? "bg-slate-300 dark:bg-slate-500 text-slate-200/80 shadow-sm" : ""
                   }`}
                   title={label}
                 >
