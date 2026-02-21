@@ -32,7 +32,7 @@ const CTASection = () => {
           Choose the best way to connect with us and let our team assist you.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {ctaItems.map((item) => (
             <div
               key={item.title}
