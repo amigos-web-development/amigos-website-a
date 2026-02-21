@@ -10,8 +10,8 @@ import {
   Mountain,
   Droplets,
   FlaskConical,
-  TestTubeDiagonal,
-} from "lucide-react";
+  TestTubeDiagonal } from
+"lucide-react";
 
 import catLandSurveying from "@/assets/cat_land_surveying.jpg";
 import catConstruction from "@/assets/cat_construction.jpg";
@@ -23,15 +23,15 @@ import catLaboratory from "@/assets/cat_laboratory.jpg";
 import catAnalytical from "@/assets/cat_analytical.jpg";
 
 const categories = [
-  { name: "Land Surveying Instrument", icon: Compass, image: catLandSurveying },
-  { name: "Construction Materials Testing Instrument", icon: HardHat, image: catConstruction },
-  { name: "Bathymetric & Hydrographic Surveying Instrument", icon: Ship, image: catBathymetric },
-  { name: "Weather, Environmental & Horticulture Instrument", icon: CloudSun, image: catWeather },
-  { name: "Geological & Earth Exploration Instrument", icon: Mountain, image: catGeological },
-  { name: "Air & Water Quality Testing Instrument", icon: Droplets, image: catWaterQuality },
-  { name: "Laboratory & Scientific Instrument", icon: FlaskConical, image: catLaboratory },
-  { name: "Analytical Testing Instrument", icon: TestTubeDiagonal, image: catAnalytical },
-];
+{ name: "Land Surveying Instrument", icon: Compass, image: catLandSurveying },
+{ name: "Construction Materials Testing Instrument", icon: HardHat, image: catConstruction },
+{ name: "Bathymetric & Hydrographic Surveying Instrument", icon: Ship, image: catBathymetric },
+{ name: "Weather, Environmental & Horticulture Instrument", icon: CloudSun, image: catWeather },
+{ name: "Geological & Earth Exploration Instrument", icon: Mountain, image: catGeological },
+{ name: "Air & Water Quality Testing Instrument", icon: Droplets, image: catWaterQuality },
+{ name: "Laboratory & Scientific Instrument", icon: FlaskConical, image: catLaboratory },
+{ name: "Analytical Testing Instrument", icon: TestTubeDiagonal, image: catAnalytical }];
+
 
 const CARD_WIDTH = 260 + 20;
 
@@ -97,8 +97,8 @@ const KeyProductCategories = () => {
       <div className="relative">
         <button
           onClick={() => scrollBy(-1)}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur border border-white/30 shadow-md flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-        >
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur border border-white/30 shadow-md flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+
           <ChevronLeft className="w-5 h-5" />
         </button>
         <div ref={scrollRef} className="flex gap-5 overflow-hidden px-4" style={{ scrollBehavior: "auto" }}>
@@ -108,8 +108,8 @@ const KeyProductCategories = () => {
               <a
                 key={i}
                 href="#"
-                className="group flex-shrink-0 w-[260px] rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg relative"
-              >
+                className="group flex-shrink-0 w-[260px] rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:shadow-lg relative">
+
                 {/* Background image */}
                 <div className="absolute inset-0">
                   <img src={cat.image} alt="" className="w-full h-full object-cover" />
@@ -121,25 +121,25 @@ const KeyProductCategories = () => {
                   <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center mb-4 group-hover:bg-white/30 transition-colors duration-300">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-sm font-semibold text-white leading-snug mb-4 min-h-[40px]">{cat.name}</h3>
+                  <h3 className="font-semibold text-white leading-snug mb-4 min-h-[40px] text-base">{cat.name}</h3>
                   <div className="mt-auto flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-sm font-medium text-white">View Products</span>
                     <ArrowRight className="w-4 h-4 text-white" />
                   </div>
                 </div>
-              </a>
-            );
+              </a>);
+
           })}
         </div>
         <button
           onClick={() => scrollBy(1)}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur border border-white/30 shadow-md flex items-center justify-center text-white hover:bg-white/30 transition-colors"
-        >
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur border border-white/30 shadow-md flex items-center justify-center text-white hover:bg-white/30 transition-colors">
+
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default KeyProductCategories;
