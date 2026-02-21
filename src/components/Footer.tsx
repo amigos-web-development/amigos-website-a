@@ -121,25 +121,25 @@ const Footer = () => {
             <div className="flex gap-3 mb-3">
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
               >
                 <Youtube className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
               >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
                 title="TikTok"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -150,28 +150,28 @@ const Footer = () => {
             <div className="flex gap-3 mb-5">
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
                 title="Messenger"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
                 title="Viber"
               >
                 <Phone className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
                 title="WhatsApp"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-700 dark:hover:bg-slate-500 hover:text-accent-foreground transition-all duration-300"
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
                 title="Telegram"
               >
                 <Send className="w-4 h-4" />
