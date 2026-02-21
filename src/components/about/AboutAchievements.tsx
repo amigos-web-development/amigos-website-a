@@ -22,7 +22,7 @@ const stats = [
 
 const AboutAchievements = () => {
   return (
-    <section className="py-20 bg-secondary/30">
+    <section className="py-20 bg-background">
       <div className="mx-auto px-4" style={{ maxWidth: "80%" }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -31,12 +31,12 @@ const AboutAchievements = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-700 via-red-600 to-orange-500 bg-clip-text text-transparent">
-              Achievements &amp; Milestones
-            </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Achievements &amp; Milestones
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Our journey of growth and excellence over the years.
+          </p>
         </motion.div>
 
         {/* Timeline */}
@@ -59,7 +59,7 @@ const AboutAchievements = () => {
               >
                 {/* Content */}
                 <div className={`ml-10 md:ml-0 md:w-[calc(50%-2rem)] ${isLeft ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"}`}>
-                  <div className="bg-card border border-border rounded-xl p-5 hover:shadow-lg transition-shadow duration-300">
+                  <div className="bg-slate-100 dark:bg-slate-700 rounded-xl p-5 hover:shadow-lg transition-shadow duration-300">
                     <span className="inline-block text-sm font-bold text-white bg-accent px-3 py-1 rounded-full mb-3">
                       {milestone.year}
                     </span>
@@ -92,7 +92,7 @@ const AboutAchievements = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
               viewport={{ once: true }}
-              className="text-center bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+              className="text-center bg-slate-100 dark:bg-slate-700 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
             >
               <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-3">
                 <stat.icon className="w-6 h-6 text-accent" />

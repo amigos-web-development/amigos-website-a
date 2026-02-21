@@ -30,13 +30,10 @@ const AboutPartners = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-700 via-red-600 to-orange-500 bg-clip-text text-transparent">
-              Our Partners &amp; Brands
-            </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Our Partners &amp; Brands
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto mb-6 rounded-full" />
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             We collaborate with world-leading manufacturers to deliver the highest quality instruments.
           </p>
         </motion.div>
@@ -49,7 +46,7 @@ const AboutPartners = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
               viewport={{ once: true }}
-              className="flex items-center justify-center bg-card border border-border rounded-xl p-6 h-28 hover:shadow-lg transition-shadow duration-300"
+              className="flex items-center justify-center bg-slate-100 dark:bg-slate-700/50 rounded-lg p-6 h-28 shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               <img
                 src={partner.src}

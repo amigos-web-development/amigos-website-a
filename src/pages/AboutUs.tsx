@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Eye, Target, Package, Wrench, Handshake, Leaf } from "lucide-react";
 import TopNavBar from "@/components/TopNavBar";
@@ -47,15 +46,9 @@ const values = [
 ];
 
 const AboutUs = () => {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark);
-  }, [isDark]);
-
   return (
     <div className="min-h-screen bg-background">
-      <TopNavBar isDark={isDark} toggleDark={() => setIsDark(!isDark)} />
+      <TopNavBar />
 
       {/* Hero Banner */}
       <div className="relative">
@@ -91,12 +84,12 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-700 via-red-600 to-orange-500 bg-clip-text text-transparent">
-                Company Culture
-              </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Company Culture
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto mb-8 rounded-full" />
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+              Our values and principles that guide everything we do.
+            </p>
             <p className="text-muted-foreground leading-relaxed text-lg mb-6">
               At Amigos International Co., Ltd., our organizational culture is founded on integrity. We are committed to
               communicating honestly and transparently about our products and services, even when challenges arise. This
@@ -112,7 +105,7 @@ const AboutUs = () => {
       </section>
 
       {/* Vision */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-background">
         <div className="mx-auto px-4" style={{ maxWidth: "80%" }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -124,12 +117,12 @@ const AboutUs = () => {
             <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6">
               <Eye className="w-8 h-8 text-accent" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-700 via-red-600 to-orange-500 bg-clip-text text-transparent">
-                Our Vision
-              </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Vision
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto mb-8 rounded-full" />
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+              Where we see ourselves in the future.
+            </p>
             <p className="text-xl text-foreground font-medium leading-relaxed">
               To become Myanmar's most trusted provider of engineering, laboratory, analytical and scientific solutions.
             </p>
@@ -150,12 +143,12 @@ const AboutUs = () => {
             <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6">
               <Target className="w-8 h-8 text-accent" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-700 via-red-600 to-orange-500 bg-clip-text text-transparent">
-                Our Mission
-              </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Mission
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              What drives us every day.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -166,7 +159,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-shadow duration-300"
+                className="flex items-start gap-4 p-6 rounded-xl bg-slate-100 dark:bg-slate-700 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
                   <mission.icon className="w-6 h-6 text-accent" />
@@ -179,7 +172,7 @@ const AboutUs = () => {
       </section>
 
       {/* Our Values */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20 bg-background">
         <div className="mx-auto px-4" style={{ maxWidth: "80%" }}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -188,12 +181,12 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-blue-700 via-red-600 to-orange-500 bg-clip-text text-transparent">
-                Our Values
-              </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Values
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              The principles that define who we are.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -204,7 +197,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 viewport={{ once: true }}
-                className="group rounded-xl overflow-hidden bg-card border border-border hover:shadow-lg transition-all duration-300"
+                className="group rounded-lg overflow-hidden bg-slate-100 dark:bg-slate-700 card-service"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
