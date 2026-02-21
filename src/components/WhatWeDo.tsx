@@ -62,8 +62,8 @@ const ServiceCard = ({ service, index }: {service: typeof services[0];index: num
 
       </div>
       <div className="p-6">
-        <h3 className="text-lg font-bold text-foreground mb-2">{service.title}</h3>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-4">{service.description}</p>
+        <h3 className="font-bold text-foreground mb-2 text-xl">{service.title}</h3>
+        <p className="text-muted-foreground leading-relaxed mb-4 text-base">{service.description}</p>
         <button className="flex items-center gap-2 text-accent font-medium text-sm transition-all duration-300">
           <span className={`transition-all duration-300 ${hovered ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2 absolute"}`}>
             Learn More
