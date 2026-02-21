@@ -28,7 +28,7 @@ const CTASection = () => {
       {/*category-gradient*/}
       <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-4">How Can We Help You?</h2>
-        <p className="text-slate-100 mb-12 max-w-2xl mx-auto">
+        <p className="text-muted-foreground mb-12 max-w-2xl mx-auto text-center">
           Choose the best way to connect with us and let our team assist you.
         </p>
 

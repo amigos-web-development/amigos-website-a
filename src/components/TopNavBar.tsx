@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Phone, Mail, Search, Globe, Moon, Sun, ShoppingCart, X, Facebook, Youtube, Linkedin } from "lucide-react";
+import { Phone, Mail, Search, Globe, ShoppingCart, X, Facebook, Youtube, Linkedin } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const languages = [
@@ -9,12 +9,7 @@ const languages = [
   { code: "th", name: "Thailand" },
 ];
 
-interface TopNavBarProps {
-  isDark: boolean;
-  toggleDark: () => void;
-}
-
-const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
+const TopNavBar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [langOpen, setLangOpen] = useState(false);
@@ -137,14 +132,6 @@ const TopNavBar = ({ isDark, toggleDark }: TopNavBarProps) => {
               </div>
             )}
           </div>
-
-          {/* Dark/Light Toggle */}
-          <button
-            onClick={toggleDark}
-            className="p-2 transition-colors rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-200"
-          >
-            {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </button>
 
           {/* Cart */}
           <button className="p-2 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors text-slate-200 dark:text-slate-100 relative">
