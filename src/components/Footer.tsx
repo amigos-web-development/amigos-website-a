@@ -7,7 +7,7 @@ type ThemeMode = "system" | "light" | "dark";
 const Footer = () => {
   const [themeMode, setThemeMode] = useState<ThemeMode>(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("theme-mode") as ThemeMode || "system";
+      return (localStorage.getItem("theme-mode") as ThemeMode) || "system";
     }
     return "system";
   });
@@ -43,16 +43,16 @@ const Footer = () => {
               Resources
             </h4>
             <ul className="space-y-2.5">
-              {["Home", "Products", "Services", "Career", "About Us", "Contact Us"].map((item) =>
-              <li key={item}>
+              {["Home", "Products", "Services", "Career", "About Us", "Contact Us"].map((item) => (
+                <li key={item}>
                   <a
-                  href="#"
-                  className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors">
-
+                    href="#"
+                    className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors"
+                  >
                     {item}
                   </a>
                 </li>
-              )}
+              ))}
             </ul>
           </div>
 
@@ -62,16 +62,16 @@ const Footer = () => {
               Career
             </h4>
             <ul className="space-y-2.5">
-              {["View All Jobs", "Development Programs", "Trainings", "Internship Programs"].map((item) =>
-              <li key={item}>
+              {["View All Jobs", "Development Programs", "Trainings", "Internship Programs"].map((item) => (
+                <li key={item}>
                   <a
-                  href="#"
-                  className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors">
-
+                    href="#"
+                    className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors"
+                  >
                     {item}
                   </a>
                 </li>
-              )}
+              ))}
             </ul>
           </div>
 
@@ -81,16 +81,16 @@ const Footer = () => {
               Activity
             </h4>
             <ul className="space-y-2.5">
-              {["Research & Development", "Event", "CSR Activity", "Staff Party", "Business Insight"].map((item) =>
-              <li key={item}>
+              {["Research & Development", "Event", "CSR Activity", "Staff Party", "Business Insight"].map((item) => (
+                <li key={item}>
                   <a
-                  href="#"
-                  className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors">
-
+                    href="#"
+                    className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors"
+                  >
                     {item}
                   </a>
                 </li>
-              )}
+              ))}
             </ul>
           </div>
 
@@ -100,16 +100,16 @@ const Footer = () => {
               HO & Branches
             </h4>
             <ul className="space-y-2.5">
-              {["Yangon Head Office", "Mandalay Office", "Naypyitaw Office", "Taung Gyi Office"].map((item) =>
-              <li key={item}>
+              {["Yangon Head Office", "Mandalay Office", "Naypyitaw Office", "Taung Gyi Office"].map((item) => (
+                <li key={item}>
                   <a
-                  href="#"
-                  className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors">
-
+                    href="#"
+                    className="text-sm hover:text-slate-500 dark:hover:text-slate-400 hover:font-bold transition-colors"
+                  >
                     {item}
                   </a>
                 </li>
-              )}
+              ))}
             </ul>
           </div>
 
@@ -121,27 +121,27 @@ const Footer = () => {
             <div className="flex gap-3 mb-3">
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300">
-
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
+              >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300">
-
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
+              >
                 <Youtube className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300">
-
+                className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
+              >
                 <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
-                title="TikTok">
-
+                title="TikTok"
+              >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78c.3 0 .59.04.86.12V9.01a6.27 6.27 0 0 0-.86-.06 6.34 6.34 0 0 0 0 12.68 6.34 6.34 0 0 0 6.34-6.34V9.06a8.16 8.16 0 0 0 4.77 1.52V7.13a4.85 4.85 0 0 1-1.01-.44z" />
                 </svg>
@@ -151,29 +151,29 @@ const Footer = () => {
               <a
                 href="#"
                 className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
-                title="Messenger">
-
+                title="Messenger"
+              >
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
-                title="Viber">
-
+                title="Viber"
+              >
                 <Phone className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
-                title="WhatsApp">
-
+                title="WhatsApp"
+              >
                 <MessageCircle className="w-4 h-4" />
               </a>
               <a
                 href="#"
                 className="w-9 h-9 rounded-lg bg-footer-foreground/10 flex items-center justify-center hover:bg-slate-400 dark:hover:bg-slate-600 hover:text-accent-foreground transition-all duration-300"
-                title="Telegram">
-
+                title="Telegram"
+              >
                 <Send className="w-4 h-4" />
               </a>
             </div>
@@ -185,21 +185,23 @@ const Footer = () => {
             {/* Theme Toggle */}
             <div className="flex items-center mt-4 p-1 gap-[2px]">
               {[
-              { mode: "system" as ThemeMode, icon: Monitor, label: "System" },
-              { mode: "light" as ThemeMode, icon: Sun, label: "Light" },
-              { mode: "dark" as ThemeMode, icon: Moon, label: "Dark" }].
-              map(({ mode, icon: Icon, label }) =>
-              <button
-                key={mode}
-                onClick={() => setThemeMode(mode)}
-                className={`p-2 text-slate-800/80 dark:text-slate-200/80 rounded-md transition-all duration-200 ${
-                themeMode === mode ? "bg-slate-700 dark:bg-slate-500 shadow-sm" : ""}`
-                }
-                title={label}>
-
+                { mode: "system" as ThemeMode, icon: Monitor, label: "System" },
+                { mode: "light" as ThemeMode, icon: Sun, label: "Light" },
+                { mode: "dark" as ThemeMode, icon: Moon, label: "Dark" },
+              ].map(({ mode, icon: Icon, label }) => (
+                <button
+                  key={mode}
+                  onClick={() => setThemeMode(mode)}
+                  className={`p-2 text-slate-800/80 dark:text-slate-200/80 rounded-md transition-all duration-200 ${
+                    themeMode === mode
+                      ? "bg-slate-700 dark:bg-slate-500 shadow-sm"
+                      : "text-slate-800/80 dark:text-slate-200/80"
+                  }`}
+                  title={label}
+                >
                   <Icon className="w-4 h-4" />
                 </button>
-              )}
+              ))}
             </div>
           </div>
         </div>
@@ -209,8 +211,8 @@ const Footer = () => {
       <div className="border-t border-footer-foreground/10">
         <div
           className="mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-footer-foreground/60"
-          style={{ maxWidth: "80%" }}>
-
+          style={{ maxWidth: "80%" }}
+        >
           <p>
             © Copyright <span className="text-footer-heading font-semibold">Amigos International Co., Ltd.</span> All
             Rights Reserved.
@@ -220,8 +222,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>);
-
+    </footer>
+  );
 };
 
 export default Footer;
