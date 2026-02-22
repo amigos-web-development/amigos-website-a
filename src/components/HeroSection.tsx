@@ -93,7 +93,7 @@ const HeroSection = () => {
           className="pb-16"
         >
           <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-ping">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {featuredProducts.map((product) => (
                 <div
                   key={product.label}
