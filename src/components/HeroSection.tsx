@@ -82,7 +82,7 @@ const HeroSection = () => {
         {/* Featured Products Row - pinned to bottom */}
         <div className="pb-16">
           <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-bounce delay-2s">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 animate-bounce delay-120">
               {featuredProducts.map((product) => (
                 <div
                   key={product.label}
