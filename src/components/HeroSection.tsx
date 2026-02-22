@@ -58,9 +58,9 @@ const HeroSection = () => {
             >
               <motion.div
                 key={`content-${current}`}
-                initial={{ opacity: 0, y: 300 }}
+                initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, delay: 1.5 }}
+                transition={{ duration: 1.0, delay: 1.0 }}
                 className="max-w-3xl bg-slate-200/30 dark:bg-slate-800/40 p-12 rounded-xl"
               >
                 <p className="text-slate-200 leading-relaxed mb-8 max-w-2xl md:text-4xl font-heading">
