@@ -3,11 +3,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import heroBg1 from "@/assets/hero_background_1.jpg";
 import heroBg2 from "@/assets/hero_background_2.jpg";
 import heroBg3 from "@/assets/hero_background_3.jpg";
+import geomax from "@/assets/geomax_automatic_level.png";
+import myzaxLaser from "@/assets/myzax_laser_distance.png";
+import laserTech from "@/assets/laser_technology_rangefinder_hypsometer.png";
+import myzoxTripod from "@/assets/myzox_aluminium_tripod.png";
 
 const slides = [
   { bg: heroBg1, description: "We are deeply committed to customer satisfaction and long-term technical support." },
   { bg: heroBg2, description: "We are deeply committed to customer satisfaction and long-term technical support." },
   { bg: heroBg3, description: "We are deeply committed to customer satisfaction and long-term technical support." },
+];
+
+const featuredProducts = [
+  { image: geomax, label: "GEOMAX Automatic Level" },
+  { image: myzaxLaser, label: "Myzax Laser Distance" },
+  { image: laserTech, label: "Laser Technology Rangefinder Hypsometer" },
+  { image: myzoxTripod, label: "Myzox Aluminium Tripod" },
 ];
 
 const HeroSection = () => {
@@ -37,7 +48,7 @@ const HeroSection = () => {
       </AnimatePresence>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex items-center">
+      <div className="relative z-10 h-full flex flex-col justify-center">
         <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
           <motion.div
             key={`content-${current}`}
@@ -64,6 +75,34 @@ const HeroSection = () => {
               </a>
             </div>
           </motion.div>
+
+          {/* Featured Products Row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+            {featuredProducts.map((product) => (
+              <div
+                key={product.label}
+                className="relative group bg-slate-200/30 dark:bg-slate-800/40 rounded-xl p-4 flex flex-col items-center overflow-hidden cursor-pointer"
+              >
+                <img
+                  src={product.image}
+                  alt={product.label}
+                  className="h-28 object-contain mb-3 transition-transform duration-300 group-hover:scale-105"
+                />
+                <p className="text-slate-200 text-sm font-medium text-center leading-tight">
+                  {product.label}
+                </p>
+                {/* Hover overlay */}
+                <div className="absolute inset-0 rounded-xl bg-[linear-gradient(135deg,_#1d4ed8cc,_#dc2626cc,_#f97316cc)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <a
+                    href="#"
+                    className="px-5 py-2 bg-white text-slate-800 font-semibold rounded-lg text-sm shadow-lg"
+                  >
+                    View Products
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
