@@ -134,7 +134,7 @@ const TopNavBar = () => {
           </div>
 
           {/* Cart */}
-          <button className="p-2 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-500 transition-colors text-slate-200 dark:text-slate-100 relative">
+          <button className="p-2 rounded-lg hover:bg-slate-400 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-200 transition-colors relative">
             <ShoppingCart className="w-4 h-4" />
           </button>
         </div>
