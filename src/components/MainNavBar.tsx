@@ -58,7 +58,9 @@ const MainNavBar = () => {
   return (
     <>
       <div ref={navRef} className="relative z-40">
-        <nav className={`transition-colors duration-300 ${scrolled ? "bg-slate-900/95 backdrop-blur-sm shadow-lg" : "bg-transparent"}`}>
+        <nav
+          className={`transition-colors duration-300 ${scrolled ? "bg-slate-200/30 dark:bg-slate-800/30 backdrop-blur-sm shadow-lg" : "bg-transparent"}`}
+        >
           <div
             className="container mx-auto flex items-center justify-between h-16 px-4 py-[16px]"
             style={{ maxWidth: "80%" }}
