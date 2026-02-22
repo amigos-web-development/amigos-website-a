@@ -54,7 +54,7 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, x: -300 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.0, ease: "easeIn", delay: 0.5 }}
+              transition={{ duration: 1.5, ease: "easeIn", delay: 0.2 }}
             >
               <motion.div
                 key={`content-${current}`}
@@ -89,7 +89,7 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 200 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 1.5 }}
+          transition={{ duration: 1.5, ease: "easeOut", delay: 1.7 }}
           className="pb-16"
         >
           <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
