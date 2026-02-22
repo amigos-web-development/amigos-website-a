@@ -52,6 +52,11 @@ const HeroSection = () => {
         <div className="flex-1 flex items-center">
           <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
             <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            >
+            <motion.div
               key={`content-${current}`}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -76,11 +81,17 @@ const HeroSection = () => {
                 </a>
               </div>
             </motion.div>
+            </motion.div>
           </div>
         </div>
 
         {/* Featured Products Row - pinned to bottom */}
-        <div className="pb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+          className="pb-16"
+        >
           <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {featuredProducts.map((product) => (
@@ -107,7 +118,7 @@ const HeroSection = () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Indicators */}
