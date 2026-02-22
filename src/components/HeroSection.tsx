@@ -52,7 +52,7 @@ const HeroSection = () => {
         <div className="flex-1 flex items-center">
           <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, ease: "easeIn", delay: 0.2 }}
             >
