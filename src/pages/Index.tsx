@@ -13,10 +13,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <TopNavBar />
-      <div className="relative">
-        <div className="absolute top-0 left-0 right-0 z-40">
-          <MainNavBar />
-        </div>
+      <div className="sticky top-0 z-50">
+        <MainNavBar />
+      </div>
+      <div className="-mt-16">
         <HeroSection />
       </div>
       <WhatWeDo />
