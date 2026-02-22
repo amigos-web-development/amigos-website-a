@@ -52,35 +52,35 @@ const HeroSection = () => {
         <div className="flex-1 flex items-center">
           <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-            <motion.div
-              key={`content-${current}`}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="max-w-3xl bg-slate-200/30 dark:bg-slate-800/40 p-12 rounded-xl"
-            >
-              <p className="text-slate-200 leading-relaxed mb-8 max-w-2xl md:text-4xl font-heading">
-                {slides[current].description}
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="#"
-                  className="px-6 py-3 bg-[linear-gradient(135deg,_#222,_#444,_#555)] hover:bg-[linear-gradient(135deg,_#1d4ed8,_#dc2626,_#f97316)] text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
-                >
-                  Contact Sales
-                </a>
-                <a
-                  href="#"
-                  className="px-6 py-3 border-2 border-slate-200/50 hover:border-0 hover:bg-[linear-gradient(135deg,_#222,_#444,_#555)] text-slate-200 font-semibold rounded-lg transition-all duration-100"
-                >
-                  View Products
-                </a>
-              </div>
-            </motion.div>
+              <motion.div
+                key={`content-${current}`}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="max-w-3xl bg-slate-200/30 dark:bg-slate-800/40 p-12 rounded-xl"
+              >
+                <p className="text-slate-200 leading-relaxed mb-8 max-w-2xl md:text-4xl font-heading">
+                  {slides[current].description}
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="#"
+                    className="px-6 py-3 bg-[linear-gradient(135deg,_#222,_#444,_#555)] hover:bg-[linear-gradient(135deg,_#1d4ed8,_#dc2626,_#f97316)] text-white font-semibold rounded-lg transition-all duration-300 shadow-lg"
+                  >
+                    Contact Sales
+                  </a>
+                  <a
+                    href="#"
+                    className="px-6 py-3 border-2 border-slate-200/50 hover:border-0 hover:bg-[linear-gradient(135deg,_#222,_#444,_#555)] text-slate-200 font-semibold rounded-lg transition-all duration-100"
+                  >
+                    View Products
+                  </a>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
