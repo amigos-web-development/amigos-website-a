@@ -38,7 +38,14 @@ const navLinks = [
 const MainNavBar = () => {
   const [productsOpen, setProductsOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -51,7 +58,7 @@ const MainNavBar = () => {
   return (
     <>
       <div ref={navRef} className="relative z-40">
-        <nav className="bg-transparent">
+        <nav className={`transition-colors duration-300 ${scrolled ? "bg-slate-900/95 backdrop-blur-sm shadow-lg" : "bg-transparent"}`}>
           <div
             className="container mx-auto flex items-center justify-between h-16 px-4 py-[16px]"
             style={{ maxWidth: "80%" }}
