@@ -66,7 +66,7 @@ const MainNavBar = () => {
                   <div key={link.label} className="relative">
                     <button
                       onClick={() => setProductsOpen(!productsOpen)}
-                      className="flex items-center gap-1 px-4 py-2 font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors text-base"
+                      className="flex items-center gap-1 px-4 py-2 font-medium text-white/90 rounded-lg hover:bg-slate-200/30 dark:hover:bg-slate-800/40 transition-colors text-base"
                     >
                       {link.label}
                       <ChevronDown
@@ -78,7 +78,7 @@ const MainNavBar = () => {
                   <a
                     key={link.label}
                     href={link.href}
-                    className="px-4 py-2 font-medium text-white/90 rounded-lg hover:bg-white/10 transition-colors text-base"
+                    className="px-4 py-2 font-medium text-white/90 rounded-lg hover:bg-slate-200/30 dark:hover:bg-slate-800/40 transition-colors text-base"
                   >
                     {link.label}
                   </a>
