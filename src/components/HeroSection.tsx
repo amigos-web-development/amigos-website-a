@@ -36,9 +36,9 @@ const HeroSection = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
-          initial={{ opacity: 0, scale: 1.05 }}
+          initial={{ opacity: 0.5, scale: 1.05 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0.5 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="absolute inset-0"
         >
@@ -93,9 +93,7 @@ const HeroSection = () => {
                     alt={product.label}
                     className="h-28 object-contain mb-3 transition-transform duration-300 group-hover:scale-105"
                   />
-                  <p className="text-slate-200 text-sm font-medium text-center leading-tight">
-                    {product.label}
-                  </p>
+                  <p className="text-slate-200 text-sm font-medium text-center leading-tight">{product.label}</p>
                   {/* Hover overlay */}
                   <div className="absolute inset-0 rounded-xl bg-[linear-gradient(135deg,_#1d4ed8cc,_#dc2626cc,_#f97316cc)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <a
