@@ -44,7 +44,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="max-w-2xl bg-slate-200 dark:bg-slate-800 p-12 rounded-xl"
+            className="max-w-3xl bg-slate-200/50 dark:bg-slate-800/50 p-12 rounded-xl"
           >
             <p className="text-slate-200 leading-relaxed mb-8 max-w-2xl md:text-4xl font-heading">
               {slides[current].description}
