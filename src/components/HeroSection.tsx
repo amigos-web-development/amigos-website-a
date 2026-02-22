@@ -54,13 +54,13 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              transition={{ duration: 0.9, ease: "easeIn", delay: 0.2 }}
             >
               <motion.div
                 key={`content-${current}`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                transition={{ duration: 0.9, delay: 0.5 }}
                 className="max-w-3xl bg-slate-200/30 dark:bg-slate-800/40 p-12 rounded-xl"
               >
                 <p className="text-slate-200 leading-relaxed mb-8 max-w-2xl md:text-4xl font-heading">
