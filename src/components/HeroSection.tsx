@@ -87,9 +87,9 @@ const HeroSection = () => {
 
         {/* Featured Products Row - pinned to bottom */}
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 200 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 1.5 }}
           className="pb-16"
         >
           <div className="container mx-auto px-4" style={{ maxWidth: "80%" }}>
